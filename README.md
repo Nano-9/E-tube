@@ -1,5 +1,9 @@
 # E-tube
-Script para downloads de video do youtube
+Script para downloads de video/playlists de video/ música do youtube
+
+> Em criação <
+
+disponivel a opção 1 e 2 por enquanto
 
 # Como usar:
 
