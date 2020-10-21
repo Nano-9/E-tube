@@ -7,7 +7,7 @@ disponivel a opção 1 e 2 por enquanto
 
 # Como usar:
 
-Vocês precisaram deste de clonar este repositorio do pytube 
+Vocês vão precisar clonar este repositório do pytube 
 
 git clone https://github.com/nficano/pytube
 
