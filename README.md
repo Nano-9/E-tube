@@ -1,4 +1,5 @@
 # Atualização chegou:
+> Data da atualização: 03/11/2020
 
 o que mudou?
 
