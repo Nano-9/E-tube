@@ -1,3 +1,16 @@
+# Atualização chegou:
+
+o que mudou?
+
+- Tratamento de erro e excessão
+
+- Duas opções novas implementadas
+> São elas:
+
+baixar música
+
+e mudar a cor do banner de entrada
+
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
 
