@@ -17,7 +17,9 @@ e meios de contato para falar comigo
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
 
-> Em criação <
+> Terá mais atualizações?
+
+Sim
 
 # Como usar:
 
