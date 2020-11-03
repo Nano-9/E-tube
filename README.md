@@ -63,7 +63,7 @@ podem usar este > https://play.google.com/store/apps/details?id=com.alphainvento
 
 É bem simples siga os comandos no linux
 
-* Acesse o dirretório de downloads
+* Acesse o diretório de downloads
 
 digite pwd w de enter
 e copie o caminho
