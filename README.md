@@ -5,12 +5,14 @@ o que mudou?
 
 - Tratamento de erro e excessão
 
-- Duas opções novas implementadas
+- Três opções novas implementadas
 > São elas:
 
 baixar música
 
-e mudar a cor do banner de entrada
+mudar a cor do banner de entrada
+
+e meios de contato para falar comigo
 
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
