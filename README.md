@@ -73,4 +73,4 @@ mv - v pytube aqui vocês colam o caminho que copiaram e de enter
 
 pronto arquivo movido, podem acessar quando quiser!
 
-script by > Lucas-DK 
+script by > Lucas-DK
