@@ -1,10 +1,10 @@
 # Atualização chegou:
-> Data da atualização: 03/11/2020
+> Data da atualização: 21/04/2021
 
 o que mudou?
 
 - Tratamento de erro e excessão
-
+- Mudanças na estética (atualização de hoje 21/04/2021)
 - Três opções novas implementadas
 > São elas:
 
