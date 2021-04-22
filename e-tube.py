@@ -78,8 +78,10 @@ MENU:
 				os.system("clear")
 
 			elif user == 2:
-				print("\n\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
-				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'playlist' do script!\n\033[m\n")
+				print()
+				print("\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
+				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'playlist' do script!\n\033[m")
+				print()
 				try:
 					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
 				except KeyboardInterrupt:
@@ -89,15 +91,19 @@ MENU:
 				else:
 					PLAYLIST_URL = link_play
 					playlist = Playlist(PLAYLIST_URL)
-					tamanho_titulo_playlist = len(playlist.title)
+					tamanho_da_playlist = 0
+					for videos in playlist:
+						tamanho_da_playlist += 1
 					print()
-					print("\n\033[1;35mDados sobre a sua playlist\033[m")
-					print("\033[1;31m******************************************************\033[m")
-					print("\033[1;36m[+] Nome:\033[m {}".format(playlist.title))
-					print("\033[1;36m[+] Tamanho da sua playlist:\033[m {} \033[1;36mvídeos!\033[m".format(tamanho_titulo_playlist))
-					print("\033[1;36m[+] link quebrado:\033[m o vídeo é pulado!")
-					print("\033[1;31m******************************************************\033[m")
+					print("\n\033[1;32mSobre a sua playlist:\033[m\n")
+					print("\033[1;31m[+] Nome:\033[m {}".format(playlist.title))
+					print("\033[1;31m[+] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
+					print("\033[1;31m[+] link quebrado:\033[m o vídeo é pulado!")
+					print("\033[1;31m[+] Local de armazenamento:\033[m pasta playlist")
 					print()
+					print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
+					suspender(1.1)
+					tamanho_da_playlist = 0
 					for numero_play, url in enumerate(playlist):
 						print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
 						video = YouTube(url)
