@@ -20,45 +20,48 @@ Script para downloads de video/playlists de video/ música do youtube
 
 > Terá mais atualizações?
 
-Sim
+- Sim
 
 # Como usar:
 
-Vocês vão precisar clonar este repositório do pytube 
+> Vocês vão precisar clonar este repositório do pytube 
 
-git clone https://github.com/nficano/pytube
+- git clone https://github.com/nficano/pytube
 
-e dar os comandos:
+- E dar os comandos:
 
-cd pytube
+- cd pytube
 
-pip install .   (sim, tem o ponto final)
+- pip install .   (sim, tem o ponto final)
 
-feito isso vocês vão clonar o meu script dentro da pasta do pytube
+> Feito isso vocês vão clonar o meu script dentro da pasta do pytube
 
-git clone https://github.com/lucas-Dk/E-tube
+- git clone https://github.com/lucas-Dk/E-tube
 
-em seguida irão dar esses comandos:
+- Em seguida irão dar esses comandos:
 
-no linux > ls
+- No linux > ls
 
-no windows > dir
+- No windows > dir
 
-no termux > ls
+- No termux > ls
 
-em seguida irão dar este comando
+> Em seguida irão dar este comando
 
-cd E-tube
+- cd E-tube
 
-python3 e-tube.py
+- python3 e-tube.py
 
-Pronto, ja tem o meu script! Pode fazer o downloads dos vídeos
+- Pronto, ja tem o meu script! Pode fazer o downloads dos vídeos
 
 # Onde fica o video baixado?
 
 - O processo de download armazena o vídeo dentro da pasta do script
 mas você pode mover a pasta do script para a área de downloads
-podendo acessar o mesmo através de um gerenciador de arquivos
+podendo acessar o mesmo através de um gerenciador de arquivos.
+O processe de download de uma playlist armazena os vídeos dentro
+de uma pasta no script chamada > playlist
+Para acessar os vídeos, abra essa pasta.
 
 - podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
 
