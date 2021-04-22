@@ -52,15 +52,16 @@ Script para downloads de video/playlists de video/ música do youtube
 
 - python3 e-tube.py
 
-- Pronto, ja tem o meu script! Pode fazer o downloads dos vídeos
+- Pronto, ja tem o meu script! Pode fazer o download dos vídeos
 
 # Onde fica o video baixado?
 
 - O processo de download armazena o vídeo dentro da pasta do script
 mas você pode mover a pasta do script para a área de downloads
 podendo acessar o mesmo através de um gerenciador de arquivos.
-O processe de download de uma playlist armazena os vídeos dentro
+O processo de download de uma playlist armazena os vídeos dentro
 de uma pasta no script chamada > playlist
+
 Para acessar os vídeos, abra essa pasta.
 
 - podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
