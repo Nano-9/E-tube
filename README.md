@@ -62,7 +62,7 @@ podendo acessar o mesmo através de um gerenciador de arquivos.
 O processo de download de uma playlist armazena os vídeos dentro
 de uma pasta no script chamada > playlist
 
-Para acessar os vídeos, abra essa pasta.
+- Para acessar os vídeos, abra essa pasta.
 
 - podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
 
