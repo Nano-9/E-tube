@@ -29,7 +29,9 @@ else:
 		banner.change_banner()
 		print("""
 
+> Coded by: Lucas-DK
 > Meu GitHub: https://github.com/lucas-Dk
+> Reporte erros: https://www.facebook.com/Walker.Lxrd/
 
 MENU:
 
@@ -63,7 +65,7 @@ MENU:
 
 				print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
 
-				for streams in yt.streams:
+				for streams in yt.streams.filter(file_extension="mp4"):
 					print("\033[1;31m[Vídeo]\033[m \033[1;33m{}\033[m".format(streams))
 					suspender(0.5)
 
@@ -76,11 +78,10 @@ MENU:
 				os.system("clear")
 
 			elif user == 2:
-				print("\n\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m\n")
-				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta do script!\n\033[m")
-				print("\n\033[1;31m[OBS]: Link quebrado = para o download!\033[m\n")
+				print("\n\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
+				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'playlist' do script!\n\033[m\n")
 				try:
-					link_play = str(input("\033[1;33mUrl do vídeo:\033[m "))
+					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -88,24 +89,37 @@ MENU:
 				else:
 					PLAYLIST_URL = link_play
 					playlist = Playlist(PLAYLIST_URL)
-					print("\n\033[1;32m[+] Baixando sua playlist...")
-					print("[+] Isso pode demorar um pouco...\033[m\n")
-					for url in playlist:
+					tamanho_titulo_playlist = len(playlist.title)
+					print()
+					print("\n\033[1;35mDados sobre a sua playlist\033[m")
+					print("\033[1;31m******************************************************\033[m")
+					print("\033[1;36m[+] Nome:\033[m {}".format(playlist.title))
+					print("\033[1;36m[+] Tamanho da sua playlist:\033[m {} \033[1;36mvídeos!\033[m".format(tamanho_titulo_playlist))
+					print("\033[1;36m[+] link quebrado:\033[m o vídeo é pulado!")
+					print("\033[1;31m******************************************************\033[m")
+					print()
+					for numero_play, url in enumerate(playlist):
+						print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
 						video = YouTube(url)
 						stream = video.streams.get_highest_resolution()
+						print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
 						try:
 							stream.download(output_path='playlist')
-						except:
-							print("[ERROR]: Download parado por que encontrei uma url quebrada!")
+						except VideoUnavailable:
+							print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
+							print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
+							time.sleep(2)
+						except KeyboardInterrupt:
+							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
 						else:
 							pass
-					print("\n\033[1;32m[+] Download Completo da playlist! Verifique na pasta onde se encontra o script!\n\033[m")
+					print("\n\033[1;32m[+] Download Completo da playlist! Verifique na pasta: playlist !\n\033[m")
 					print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 					suspender(2)
 					os.system("clear")
 
 			elif user == 3:
-				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m\n")
+				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
 				print("\033[1;32m[+] A música ficará salva na pasta do script!\n\033[m")
 				print("\n\033[1;31m[OBS]: Essa opção não converte o vídeo para .MP3")
 				print("Apenas baixa somente o audio!\033[m\n")
@@ -119,7 +133,7 @@ MENU:
 					url_download = link
 					yt = YouTube(url_download)
 					print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
-					for streams in yt.streams:
+					for streams in yt.streams.filter(only_audio=True):
 						print("\033[1;31m[Música]\033[m \033[1;33m{}\033[m".format(streams))
 						suspender(0.5)
 					print("\n\033[1;92m[+] Fazendo o download...\033[m")
