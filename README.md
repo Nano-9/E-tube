@@ -56,27 +56,26 @@ Pronto, ja tem o meu script! Pode fazer o downloads dos vídeos
 
 # Onde fica o video baixado?
 
-O processo de download armazena o vídeo dentro da pasta do script
+- O processo de download armazena o vídeo dentro da pasta do script
 mas você pode mover a pasta do script para a área de downloads
 podendo acessar o mesmo através de um gerenciador de arquivos
 
-podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
+- podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
 
 # Como mover o script?
 
-É bem simples siga os comandos no linux
+> É bem simples siga os comandos no linux
 
-* Acesse o diretório de downloads
+- Acesse o diretório de downloads
 
-digite pwd w de enter
-e copie o caminho
+- Digite pwd, de enter e copie o caminho que vai aparecer
 
-* Volte e vá ate onde a pasta do script está
+- Volte e vá ate onde a pasta do script está
 
-digite este comando
+> digite este comando:
 
-mv - v pytube aqui vocês colam o caminho que copiaram e de enter
+- mv -v pytube aqui vocês colam o caminho que copiaram e de enter
 
-pronto arquivo movido, podem acessar quando quiser!
+- Pronto arquivo movido, podem acessar quando quiser!
 
-script by > Lucas-DK
+> script by > Lucas-DK
