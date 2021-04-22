@@ -11,11 +11,9 @@ o que mudou?
 - Três opções novas implementadas
 > São elas:
 
-baixar música
-
-mudar a cor do banner de entrada
-
-e meios de contato para falar comigo
+- Baixar música
+- Mudar a cor do banner de entrada
+- E meios de contato para falar comigo
 
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
