@@ -13,7 +13,7 @@ O que mudou?
 
 - Baixar música
 - Mudar a cor do banner de entrada
-- E meios de contato para falar comigo
+- Meios de contato para falar comigo
 
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
