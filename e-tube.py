@@ -139,7 +139,8 @@ MENU:
 							video = YouTube(url)
 							stream = video.streams.get_highest_resolution()
 							print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
-							stream.download(output_path='Playlist YT')
+							try:
+								stream.download(output_path='Playlist YT')
 							except VideoUnavailable:
 								print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
 								print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
