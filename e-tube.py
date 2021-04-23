@@ -91,11 +91,13 @@ MENU:
 						suspender(0.5)
 
 					print("\n\033[1;32m[+] Iniciando o download...\033[m")
-					suspender(0.5)
+					suspender(0.1)
 					try:
 						video = yt.streams.get_highest_resolution()
 						yt.register_on_progress_callback(on_progress)
 						video.download()
+					except VideoUnavailable:
+						print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
 					except KeyboardInterrupt:
 						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
 						suspender(1)
@@ -126,7 +128,7 @@ MENU:
 						print("\n\033[1;32mSobre a sua playlist:\033[m\n")
 						print("\033[1;31m[+] Nome:\033[m {}".format(playlist.title))
 						print("\033[1;31m[+] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
-						print("\033[1;31m[+] link quebrado:\033[m o download para!")
+						print("\033[1;31m[+] link quebrado:\033[m o vídeo é pulado!")
 						print("\033[1;31m[+] Local de armazenamento:\033[m pasta Playlist YT")
 						print()
 						print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
@@ -139,6 +141,10 @@ MENU:
 							print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
 							try:
 								stream.download(output_path='Playlist YT')
+							except VideoUnavailable:
+								print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
+								print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
+								time.sleep(2)
 							except KeyboardInterrupt:
 								print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
 							else:
