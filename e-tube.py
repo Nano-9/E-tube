@@ -139,8 +139,7 @@ MENU:
 							video = YouTube(url)
 							stream = video.streams.get_highest_resolution()
 							print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
-							try:
-								stream.download(output_path='Playlist YT')
+							stream.download(output_path='Playlist YT')
 							except VideoUnavailable:
 								print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
 								print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
@@ -193,14 +192,14 @@ MENU:
 				elif user == 5:
 					os.system("clear")
 					print("""
-	\033[1;33m[+] Para contato:\033[m
+\033[1;33m[+] Para contato:\033[m
 
-	---------------------------------------------------------------
-	\033[1;4mE-mail:\033[m lucas2000bss@gmail.com
-	\033[1;4mFacebook:\033[m https://www.facebook.com/Walker.Lxrd/
-	---------------------------------------------------------------
+---------------------------------------------------------------
+\033[1;4mE-mail:\033[m lucas2000bss@gmail.com
+\033[1;4mFacebook:\033[m https://www.facebook.com/Walker.Lxrd/
+---------------------------------------------------------------
 
-	\033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
+\033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 					""")
 					try:
 						input("Dê enter para voltar ao menu... ")
