@@ -48,19 +48,19 @@ else:
 			banner.change_banner()
 			print("""
 
-	> Coded by: Lucas-DK
-	> Meu GitHub: https://github.com/lucas-Dk
-	> Reporte erros: https://www.facebook.com/Walker.Lxrd/
+> Coded by: Lucas-DK
+> Meu GitHub: https://github.com/lucas-Dk
+> Reporte erros: https://www.facebook.com/Walker.Lxrd/
 
-	MENU:
+MENU:
 
-	\033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
-	\033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
-	\033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
-	\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
-	\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Fale comigo
-	\033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
-				""")
+\033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
+\033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
+\033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
+\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
+			""")
 			try:
 				user = input("\n\033[1;33mO que você deseja:\033[m ")
 			except KeyboardInterrupt:
@@ -134,11 +134,15 @@ else:
 						print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
 						suspender(1.1)
 						tamanho_da_playlist = 0
-						for numero_play, url in enumerate(playlist):
-							print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
-							video = YouTube(url)
-							stream = video.streams.get_highest_resolution()
-							print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
+						try:
+							for numero_play, url in enumerate(playlist):
+								print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
+								video = YouTube(url)
+								stream = video.streams.get_highest_resolution()
+								print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
+						except KeyboardInterrupt:
+							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
+						else:
 							try:
 								stream.download(output_path='Playlist YT')
 							except VideoUnavailable:
