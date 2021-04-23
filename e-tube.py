@@ -134,15 +134,11 @@ MENU:
 						print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
 						suspender(1.1)
 						tamanho_da_playlist = 0
-						try:
-							for numero_play, url in enumerate(playlist):
-								print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
-								video = YouTube(url)
-								stream = video.streams.get_highest_resolution()
-								print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
-						except KeyboardInterrupt:
-							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
-						else:
+						for numero_play, url in enumerate(playlist):
+							print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
+							video = YouTube(url)
+							stream = video.streams.get_highest_resolution()
+							print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
 							try:
 								stream.download(output_path='Playlist YT')
 							except VideoUnavailable:
