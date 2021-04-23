@@ -7,7 +7,7 @@ try:
 	import urllib.request
 	import os
 	import banner
-except Exception as Erro:
+except:
 	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca: \033[mPytube! ")
 	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt\n")
 	sys.exit()
