@@ -1,13 +1,19 @@
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
-
-from pytube import YouTube, Playlist
-from time import sleep as suspender
-import sys
-import urllib.request
-import os
-import banner
-
+try:
+	from pytube import YouTube, Playlist
+	from time import sleep as suspender
+	import sys
+	import urllib.request
+	import os
+	import banner
+except:
+	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca Pytube\033[m")
+	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt")
+	print("\n\033[1;31mE tente novamente!\033[m")
+	sys.exit()
+else:
+	pass
 print()
 
 previousprogress = 0
@@ -19,7 +25,9 @@ def on_progress(stream, chunk, bytes_remaining):
     liveprogress = (int)(bytes_downloaded / total_size * 100)
     if liveprogress > previousprogress:
         previousprogress = liveprogress
-        print("\033[1;34m[+] Baixando:\033[m [{}]% \033[1;34mpronto\033[m".format(liveprogress))
+        bytes_archive = int(bytes_remaining)
+        print("\033[1;34m[+] Baixando:\033[m [{}]% | [{}] \033[1;34mMib/s\033[m \033[1;32mconcluído\033[m".format(liveprogress,bytes_archive))
+
 
 os.system("clear")
 mensagem_boas_vindas = "Seja bem vindo ao E-tube!"
@@ -44,6 +52,7 @@ else:
 > Coded by: Lucas-DK
 > Meu GitHub: https://github.com/lucas-Dk
 > Reporte erros: https://www.facebook.com/Walker.Lxrd/
+
 MENU:
 
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
@@ -88,7 +97,9 @@ MENU:
 					video = yt.streams.get_highest_resolution()
 					yt.register_on_progress_callback(on_progress)
 					video.download()
-				except:
+				except VideoUnavailable:
+					print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
+				except KeyboardInterrupt:
 					print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
 					suspender(1)
 					sys.exit()
