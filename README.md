@@ -1,5 +1,5 @@
 # Atualização chegou:
-> Data da atualização: 21/04/2021
+> Data da atualização: 22/04/2021
 
 O que mudou?
 
@@ -8,6 +8,7 @@ O que mudou?
 - Opção de baixar uma playlist foi totalmente refeita (atualização de hoje 21/04/2021)
 - Filtros de extensões adicionados para cada extensão (atualização de hoje 21/04/2021)
 - Script mais interativo e colorido para deixar mais fácil o uso (atualização de hoje 21/04/2021)
+- Progresso de download de vídeos adicionada! (atualização de hoje 22/04/2021)
  
 > Três opções novas implementadas. São elas:
 
