@@ -1,16 +1,15 @@
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
 try:
+	import sys
 	from pytube import YouTube, Playlist
 	from time import sleep as suspender
-	import sys
 	import urllib.request
 	import os
 	import banner
-except:
-	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca Pytube\033[m")
-	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt")
-	print("\n\033[1;31mE tente novamente!\033[m")
+except Exception as Erro:
+	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca: \033[mPytube! ")
+	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt\n")
 	sys.exit()
 else:
 
