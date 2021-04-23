@@ -9,6 +9,18 @@ import os
 import banner
 
 print()
+
+previousprogress = 0
+def on_progress(stream, chunk, bytes_remaining):
+    global previousprogress
+    total_size = stream.filesize
+    bytes_downloaded = total_size - bytes_remaining 
+
+    liveprogress = (int)(bytes_downloaded / total_size * 100)
+    if liveprogress > previousprogress:
+        previousprogress = liveprogress
+        print("\033[1;34m[+] Baixando:\033[m [{}]% \033[1;34mpronto\033[m".format(liveprogress))
+
 os.system("clear")
 mensagem_boas_vindas = "Seja bem vindo ao E-tube!"
 for letra in mensagem_boas_vindas:
@@ -32,7 +44,6 @@ else:
 > Coded by: Lucas-DK
 > Meu GitHub: https://github.com/lucas-Dk
 > Reporte erros: https://www.facebook.com/Walker.Lxrd/
-
 MENU:
 
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
@@ -52,8 +63,10 @@ MENU:
 			user = int(user)
 			
 			if user == 1:
-				print("\n\033[1;32m[+] Opção 1 > Download de um video.mp4\n\033[m")
-				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\n\033[m")
+				print()
+				print("\033[1;32m[+] Opção 1 > Download de um video.mp4\033[m")
+				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m")
+				print()
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
 				except KeyboardInterrupt:
@@ -69,18 +82,25 @@ MENU:
 					print("\033[1;31m[Vídeo]\033[m \033[1;33m{}\033[m".format(streams))
 					suspender(0.5)
 
-				print("\n\033[1;32m[+] Baixando o vídeo com a maior qualidade disponível...\033[m")
-				video = yt.streams.get_highest_resolution()
-				video.download()
+				print("\n\033[1;32m[+] Iniciando o download...\033[m")
+				try:
+					suspender(2)
+					video = yt.streams.get_highest_resolution()
+					yt.register_on_progress_callback(on_progress)
+					video.download()
+				except:
+					print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
+					suspender(1)
+					sys.exit()
 				print("\n\033[1;96m[+] Download completo do vídeo!\033[m")
-				print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
+				print("\033[1;35m[+] Voltando ao menu...\033[m")
 				suspender(2)
 				os.system("clear")
 
 			elif user == 2:
 				print()
 				print("\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
-				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'playlist' do script!\n\033[m")
+				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'Playlist YT' do script!\n\033[m")
 				print()
 				try:
 					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
@@ -99,7 +119,7 @@ MENU:
 					print("\033[1;31m[+] Nome:\033[m {}".format(playlist.title))
 					print("\033[1;31m[+] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
 					print("\033[1;31m[+] link quebrado:\033[m o vídeo é pulado!")
-					print("\033[1;31m[+] Local de armazenamento:\033[m pasta playlist")
+					print("\033[1;31m[+] Local de armazenamento:\033[m pasta Playlist YT")
 					print()
 					print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
 					suspender(1.1)
@@ -110,7 +130,7 @@ MENU:
 						stream = video.streams.get_highest_resolution()
 						print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
 						try:
-							stream.download(output_path='playlist')
+							stream.download(output_path='Playlist YT')
 						except VideoUnavailable:
 							print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
 							print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
@@ -119,7 +139,7 @@ MENU:
 							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
 						else:
 							pass
-					print("\n\033[1;32m[+] Download Completo da playlist! Verifique na pasta: playlist !\n\033[m")
+					print("\n\033[1;32m[+] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
 					print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 					suspender(2)
 					os.system("clear")
@@ -127,8 +147,7 @@ MENU:
 			elif user == 3:
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
 				print("\033[1;32m[+] A música ficará salva na pasta do script!\n\033[m")
-				print("\n\033[1;31m[OBS]: Essa opção não converte o vídeo para .MP3")
-				print("Apenas baixa somente o audio!\033[m\n")
+				print("\n\033[1;31m[OBS]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
 				except KeyboardInterrupt:
@@ -143,12 +162,16 @@ MENU:
 						print("\033[1;31m[Música]\033[m \033[1;33m{}\033[m".format(streams))
 						suspender(0.5)
 					print("\n\033[1;92m[+] Fazendo o download...\033[m")
-					musica = yt.streams.get_highest_resolution()
 					try:
+						musica = yt.streams.get_highest_resolution()
+						yt.register_on_progress_callback(on_progress)
 						musica.download()
 					except:
-						print("\n\033[1;31m[OPS]: Ocorreu um erro, verifique o link do vídeo...\033[m")
+						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
+						suspender(1)
+						sys.exit()
 					else:
+
 						print("\n\033[1;31m[+] Download completo!\033[m\n")
 						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 						suspender(2)
@@ -167,7 +190,7 @@ MENU:
 \033[1;4mFacebook:\033[m https://www.facebook.com/Walker.Lxrd/
 ---------------------------------------------------------------
 
-[+] Fale comigo por uma dessas redes e terá contato comigo
+\033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
 				try:
 					input("Dê enter para voltar ao menu... ")
