@@ -55,13 +55,13 @@ else:
 
 MENU:
 
-\033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
-\033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
-\033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
-\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Reparar erro do script
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Fale comigo
-\033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
+\033[1;31m[\033[1;32m 01 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
+\033[1;31m[\033[1;32m 02 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
+\033[1;31m[\033[1;32m 03 \033[m\033[1;31m]\033[m - Baixar uma música MP3
+\033[1;31m[\033[1;32m 04 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 05 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 06 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m xx \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
 			user = input("\n\033[1;33mO que você deseja:\033[m ")
@@ -72,7 +72,8 @@ MENU:
 		if user.isnumeric():
 			user = int(user)
 			
-			if user == 1:
+			if user == 1 or user == 01:
+
 				print()
 				print("\033[1;32m[+] Opção 1 > Download de um video.mp4\033[m")
 				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m")
@@ -108,7 +109,8 @@ MENU:
 				suspender(2)
 				os.system("clear")
 
-			elif user == 2:
+			elif user == 2 or user == 02:
+
 				print()
 				print("\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
 				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'Playlist YT' do script!\n\033[m")
@@ -154,7 +156,8 @@ MENU:
 					suspender(2)
 					os.system("clear")
 
-			elif user == 3:
+			elif user == 3 or user == 03:
+
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
 				print("\033[1;32m[+] A música ficará salva na pasta do script!\033[m")
 				print("\033[1;31m[Atenção]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
@@ -187,26 +190,33 @@ MENU:
 						suspender(2)
 						os.system("clear")
 
-			elif user == 4:
+			elif user == 4 or user == 04:
 				os.system("clear")
 
-			elif user == 5:
+			elif user == 5 or user == 05:
 
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
+					print("\033[1;32m[+] Atenção: Caso o erro continue entre em contato comigo:\033[m https://www.facebook.com/Walker.Lxrd/\n ")
+					seguir_reparo = str(input("Enter para seguir com o reparo: "))
+					os.system("clear")
 					# comandos para reparar o erro do E-tube
-					print("\033[1;31mReparando o script...\033[m\n")
+					print("\n\033[1;31m[+] Reparando o script...\033[m\n")
 
 					os.system("pip uninstall pytube -y")
 					os.system("pip install -r requirements.txt")
 
-					print("\n\033[1;32mReparação completa!\033[m")
-					suspender(1.3)
+					print("\n\033[1;32m[+] Reparação completa!\033[m\n")
+					print("\033[1;32m[+] Abrindo o E-tube...")
+					suspender(1.4)
 					os.system("clear")
 					os.system("python e-tube.py")
 				else:
 					print("\033[1;31mDesculpe! O seu sistema pode apresentar falhas com esse path\033[m")
-			elif user == 6:
+					print("\033[1;33mEntre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
+					sys.exit()
+			elif user == 6 or user == 06:
+
 				os.system("clear")
 				print("""
 \033[1;33m[+] Para contato:\033[m
@@ -224,7 +234,7 @@ MENU:
 				suspender(0.8)
 				os.system("clear")
 
-		elif user == 'X' or user == 'x':
+		elif user == 'X' or user == 'x' or user == "xx" or user == "XX":
 			print("Saindo...")
 			suspender(1)
 			sys.exit()
@@ -235,5 +245,3 @@ MENU:
 			os.system("clear")
 
 # Fim do script
-
-
