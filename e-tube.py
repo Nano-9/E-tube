@@ -53,6 +53,7 @@ else:
 > Meu GitHub: https://github.com/lucas-Dk
 > Reporte erros: https://www.facebook.com/Walker.Lxrd/
 
+
 MENU:
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
 \033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
@@ -243,5 +244,6 @@ MENU:
 			os.system("clear")
 
 # Fim do script
+
 
 
