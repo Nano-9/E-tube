@@ -94,7 +94,6 @@ MENU:
 
 				print("\n\033[1;32m[+] Iniciando o download...\033[m")
 				try:
-					suspender(2)
 					video = yt.streams.get_highest_resolution()
 					yt.register_on_progress_callback(on_progress)
 					video.download()
@@ -134,7 +133,6 @@ MENU:
 					print("\033[1;31m[+] Local de armazenamento:\033[m pasta Playlist YT")
 					print()
 					print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
-					suspender(1.1)
 					tamanho_da_playlist = 0
 					for numero_play, url in enumerate(playlist):
 						print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
@@ -158,8 +156,8 @@ MENU:
 
 			elif user == 3:
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
-				print("\033[1;32m[+] A música ficará salva na pasta do script!\n\033[m")
-				print("\n\033[1;31m[OBS]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
+				print("\033[1;32m[+] A música ficará salva na pasta do script!\033[m")
+				print("\033[1;31m[Atenção]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
 				except KeyboardInterrupt:
