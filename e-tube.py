@@ -96,8 +96,6 @@ MENU:
 						video = yt.streams.get_highest_resolution()
 						yt.register_on_progress_callback(on_progress)
 						video.download()
-					except VideoUnavailable:
-						print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
 					except KeyboardInterrupt:
 						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
 						suspender(1)
