@@ -196,7 +196,8 @@ MENU:
 
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
-					print("\033[1;32m[+] Atenção: Caso o erro continue entre em contato comigo:\033[m https://www.facebook.com/Walker.Lxrd/\n ")
+					print("\n\033[1;32m[+] Atenção: Caso o erro continue entre em contato comigo:\033[m ")
+					print("> https://www.facebook.com/Walker.Lxrd/\n ")
 					seguir_reparo = str(input("Enter para seguir com o reparo: "))
 					os.system("clear")
 					# comandos para reparar o erro do E-tube
@@ -242,4 +243,5 @@ MENU:
 			os.system("clear")
 
 # Fim do script
+
 
