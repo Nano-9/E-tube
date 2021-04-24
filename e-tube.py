@@ -191,22 +191,22 @@ MENU:
 				os.system("clear")
 
 			elif user == 5:
-				print("\033[1;32mOlá, bem vindo a central de reparo do E-tube\n\033[m")
-				print("[ATENÇÃO]: Peço desculpas pelo fato ocorrido, por isso deixei um path")
-				print("de auto reparo aqui na pasta do E-tube, rode-o e o erro será resolvido!")
-				print("[+] Saia do script e rode o reparo.py")
-				print("[+] Comando a ser executado:\n")
-				print("[+] python reparo.py")
-				print("\nCaso o erro continuar, pode ser no próprio YouTube! O melhor a se fazer")
-				print("Caso isso ocorra é esperar. Obrigado por usar o meu código!")
-				print("			-lucas-Dk\n")
-				try:
-					input("Dê enter para voltar ao menu... ")
-				except KeyboardInterrupt:
-					print("\nSaindo...")
-					suspender(1)
-					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
-				os.system("clear")
+
+				sistema = sys.platform
+				if sistema == "Linux" or "Linux2":
+					# comandos para reparar o erro do E-tube
+					sys.exit()
+					print("\033[1;31mReparando o script...\033[m\n")
+
+					os.system("pip uninstall pytube -y")
+					os.system("pip install -r requirements.txt")
+
+					print("\n\033[1;32mReparação completa!\033[m")
+					s(1.3)
+					os.system("clear")
+					os.system("python e-tube.py")
+				else:
+					print("\033[1;31mDesculpe! O seu sistema pode apresentar falhas com esse path\033[m")
 			elif user == 6:
 				os.system("clear")
 				print("""
