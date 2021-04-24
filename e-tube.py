@@ -44,11 +44,11 @@ for x in mensagem_erro_etube:
 	suspender(0.1)
 print()
 for z in mensagem_erro_etube2:
-	print("\033[1;32m{}\033[m".format(x),flush=True,end="")
+	print("\033[1;32m{}\033[m".format(z),flush=True,end="")
 	suspender(0.1)
 print()
 for y in mensagem_erro_etube3:
-	print("\033[1;32m{}\033[m".format(x),flush=True,end="")
+	print("\033[1;32m{}\033[m".format(y),flush=True,end="")
 	suspender(0.1)
 print()
 continuar = input("Se entendeu digite Enter para continuar: ")
