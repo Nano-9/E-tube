@@ -36,23 +36,7 @@ for letra in mensagem_boas_vindas:
 	suspender(0.1)
 suspender(1.1)
 os.system("clear")
-mensagem_erro_etube = "Olá, aqui é o programador do E-tube! Escrevi esse texto para avisar"
-mensagem_erro_etube2 = "que se caso o script der algum erro, é por causa do próprio YouTube."
-mensagem_erro_etube3 = "Isso acontece ok!"
-for x in mensagem_erro_etube:
-	print("\033[1;32m{}\033[m".format(x),flush=True,end="")
-	suspender(0.1)
-print()
-for z in mensagem_erro_etube2:
-	print("\033[1;32m{}\033[m".format(z),flush=True,end="")
-	suspender(0.1)
-print()
-for y in mensagem_erro_etube3:
-	print("\033[1;32m{}\033[m".format(y),flush=True,end="")
-	suspender(0.1)
-print()
-continuar = input("Se entendeu digite Enter para continuar: ")
-os.system("clear")
+
 try:
 	print("\033[1;31m[+] Verificando se você está conectado na internet...\033[m")
 	suspender(1.4)
@@ -76,6 +60,7 @@ MENU:
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
 \033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
 \033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Mensagem \033[1;33m[Leia]\033[m
 \033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -226,6 +211,26 @@ MENU:
 					suspender(1)
 					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
 				os.system("clear")
+			elif user == 6:
+				mensagem_erro_etube = "Olá, aqui é o programador do E-tube! Escrevi esse texto para avisar"
+				mensagem_erro_etube2 = "que se caso o script der algum erro, é por causa do próprio YouTube."
+				mensagem_erro_etube3 = "Isso acontece ok!"
+				print()
+				for x in mensagem_erro_etube:
+					print("\033[1;32m{}\033[m".format(x),flush=True,end="")
+					suspender(0.1)
+				print()
+				for z in mensagem_erro_etube2:
+					print("\033[1;32m{}\033[m".format(z),flush=True,end="")
+					suspender(0.1)
+				print()
+				for y in mensagem_erro_etube3:
+					print("\033[1;32m{}\033[m".format(y),flush=True,end="")
+					suspender(0.1)
+				print()
+				continuar = input("\n[+] Se entendeu digite Enter para voltar ao menu: ")
+				os.system("clear")
+
 			else:
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
