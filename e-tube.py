@@ -195,7 +195,6 @@ MENU:
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
 					# comandos para reparar o erro do E-tube
-					sys.exit()
 					print("\033[1;31mReparando o script...\033[m\n")
 
 					os.system("pip uninstall pytube -y")
