@@ -60,7 +60,8 @@ MENU:
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
 \033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
 \033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Fale comigo
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Mensagem \033[1;33m[Leia]\033[m
+\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Sobre bugs/consertar 1
+\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Sobre bugs/consertar 2
 \033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -229,6 +230,16 @@ MENU:
 				continuar = input("\n[+] Se entendeu digite Enter para voltar ao menu: ")
 				os.system("clear")
 
+			elif user == 7:
+				print()
+				print("\n>> Caso o erro do youtube continue <<")
+				print("[+] Execute esses comandos:\n")
+				print("[+] pip uninstall pytube [confirme com Y]")
+				print("[+] pip install -r requirements.txt")
+				print("\n\033[1;31m[Atenção]: Faça isso tudo dentro da pasta do script!\033[m")
+				continuar = input("\n[+] Se entendeu digite Enter para voltar ao menu: ")
+				os.system("clear")
+
 			else:
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
@@ -245,3 +256,4 @@ MENU:
 			os.system("clear")
 
 # Fim do script
+
