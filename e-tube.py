@@ -201,7 +201,7 @@ MENU:
 					os.system("pip install -r requirements.txt")
 
 					print("\n\033[1;32mReparação completa!\033[m")
-					s(1.3)
+					suspender(1.3)
 					os.system("clear")
 					os.system("python e-tube.py")
 				else:
