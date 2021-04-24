@@ -36,7 +36,23 @@ for letra in mensagem_boas_vindas:
 	suspender(0.1)
 suspender(1.1)
 os.system("clear")
-
+mensagem_erro_etube = "Olá, aqui é o programador do E-tube! Escrevi esse texto para avisar"
+mensagem_erro_etube2 = "que se caso o script der algum erro, é por causa do próprio YouTube."
+mensagem_erro_etube3 = "Isso acontece ok!"
+for x in mensagem_erro_etube:
+	print("\033[1;32m{}\033[m".format(x),flush=True,end="")
+	suspender(0.1)
+print()
+for z in mensagem_erro_etube2:
+	print("\033[1;32m{}\033[m".format(x),flush=True,end="")
+	suspender(0.1)
+print()
+for y in mensagem_erro_etube3:
+	print("\033[1;32m{}\033[m".format(x),flush=True,end="")
+	suspender(0.1)
+print()
+continuar = input("Se entendeu digite Enter para continuar: ")
+os.system("clear")
 try:
 	print("\033[1;31m[+] Verificando se você está conectado na internet...\033[m")
 	suspender(1.4)
