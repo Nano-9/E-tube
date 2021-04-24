@@ -9,13 +9,14 @@ O que mudou?
 - Filtros de extensões adicionados para cada extensão. (atualização de hoje 21/04/2021)
 - Script mais interativo e colorido para deixar mais fácil o uso. (atualização de hoje 21/04/2021)
 - Progresso de download de vídeos adicionada! (atualização de hoje 22/04/2021)
-- Adicionado um path de reparo.
+- Adicionado um path de reparo. (atualização de hoje 24/04/2021)
  
-> Três opções novas implementadas. São elas:
+> Quatro opções novas implementadas. São elas:
 
 - Baixar música
 - Mudar a cor do banner de entrada
 - Meios de contato para falar comigo
+- Reparar erros do script
 
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
