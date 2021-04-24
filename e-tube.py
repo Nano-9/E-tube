@@ -59,9 +59,8 @@ MENU:
 \033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
 \033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Fale comigo
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Sobre bugs/consertar 1
-\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Sobre bugs/consertar 2
+\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Reparar erro do script
+\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Fale comigo
 \033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -192,6 +191,23 @@ MENU:
 				os.system("clear")
 
 			elif user == 5:
+				print("\033[1;32mOlá, bem vindo a central de reparo do E-tube\n\033[m")
+				print("[ATENÇÃO]: Peço desculpas pelo fato ocorrido, por isso deixei um path")
+				print("de auto reparo aqui na pasta do E-tube, rode-o e o erro será resolvido!")
+				print("[+] Saia do script e rode o reparo.py")
+				print("[+] Comando a ser executado:\n")
+				print("[+] python reparo.py")
+				print("\nCaso o erro continuar, pode ser no próprio YouTube! O melhor a se fazer")
+				print("Caso isso ocorra é esperar. Obrigado por usar o meu código!")
+				print("			-lucas-Dk\n")
+				try:
+					input("Dê enter para voltar ao menu... ")
+				except KeyboardInterrupt:
+					print("\nSaindo...")
+					suspender(1)
+					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
+				os.system("clear")
+			elif user == 6:
 				os.system("clear")
 				print("""
 \033[1;33m[+] Para contato:\033[m
@@ -203,42 +219,6 @@ MENU:
 
 \033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
-				try:
-					input("Dê enter para voltar ao menu... ")
-				except KeyboardInterrupt:
-					print("\nSaindo...")
-					suspender(1)
-					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
-				os.system("clear")
-			elif user == 6:
-				mensagem_erro_etube = "Olá, aqui é o programador do E-tube! Escrevi esse texto para avisar"
-				mensagem_erro_etube2 = "que se caso o script der algum erro, é por causa do próprio YouTube."
-				mensagem_erro_etube3 = "Isso acontece ok!"
-				print()
-				for x in mensagem_erro_etube:
-					print("\033[1;32m{}\033[m".format(x),flush=True,end="")
-					suspender(0.1)
-				print()
-				for z in mensagem_erro_etube2:
-					print("\033[1;32m{}\033[m".format(z),flush=True,end="")
-					suspender(0.1)
-				print()
-				for y in mensagem_erro_etube3:
-					print("\033[1;32m{}\033[m".format(y),flush=True,end="")
-					suspender(0.1)
-				print()
-				continuar = input("\n[+] Se entendeu digite Enter para voltar ao menu: ")
-				os.system("clear")
-
-			elif user == 7:
-				print()
-				print("\n>> Caso o erro do youtube continue <<")
-				print("[+] Execute esses comandos:\n")
-				print("[+] pip uninstall pytube [confirme com Y]")
-				print("[+] pip install -r requirements.txt")
-				print("\n\033[1;31m[Atenção]: Faça isso tudo dentro da pasta do script!\033[m")
-				continuar = input("\n[+] Se entendeu digite Enter para voltar ao menu: ")
-				os.system("clear")
 
 			else:
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
