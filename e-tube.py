@@ -8,6 +8,7 @@ try:
 	import os
 	import banner
 except:
+	
 	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca Pytube\033[m")
 	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt")
 	print("\n\033[1;31mE tente novamente!\033[m")
@@ -55,6 +56,7 @@ else:
 
 
 MENU:
+
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
 \033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
