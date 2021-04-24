@@ -55,7 +55,7 @@ else:
 MENU:
 
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
-\033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
+\033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4 \033[1;31m[MANUTENÇÃO]\033[m
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
 \033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
 \033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Fale comigo
