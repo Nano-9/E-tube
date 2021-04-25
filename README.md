@@ -13,7 +13,7 @@ O que mudou?
 - Adicionado a função histórico, onde seus links de vídeos favoritos ficam salvos! (Atualização de hoje 25/04/2021)
 
 # Função histórico?
-- Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlist preferidas
+- Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlists preferidas
 > Como usá-la?
 
 - Rode esse comando dentro da pasta do script E-tube:
