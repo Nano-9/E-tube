@@ -20,8 +20,9 @@ O que mudou?
 - python links.py --visualizar ou --v
 - Em seguida todo o histórico de links vai aparecer para você!
 
-> Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
-> de algum vídeo, rode o script link.py que você achará!
+# Ajuda a encontrar vídeos esquecidos:
+- Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
+- de algum vídeo, rode o script links.py que você achará!
  
 > Quatro opções novas implementadas. São elas:
 
