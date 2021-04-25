@@ -10,7 +10,7 @@ O que mudou?
 - Script mais interativo e colorido para deixar mais fácil o uso. (atualização de hoje 21/04/2021)
 - Progresso de download de vídeos adicionada! (atualização de hoje 22/04/2021)
 - Adicionado um patch de reparo. Opção 5 no script. (atualização de hoje 24/04/2021)
-- Adicionado a opção de histórico, onde seus links de vídeos favoritos ficam salvos! (Atualização de hoje 25/04/2021)
+- Adicionado a função histórico, onde seus links de vídeos favoritos ficam salvos! (Atualização de hoje 25/04/2021)
 
 # Função histórico?
 - Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlist preferidas
