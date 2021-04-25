@@ -40,7 +40,7 @@ Script para downloads de video/playlists de video/ música do youtube
 
 # Como usar:
 
-> Vocês vão precisar clonar este repositório do pytube ou digitar pip install -r requeriments.txt 
+> Vocês vão precisar clonar este repositório do pytube ou digitar pip install -r requirements.txt 
 
 - git clone https://github.com/nficano/pytube
 
