@@ -103,7 +103,7 @@ MENU:
 				try:
 					video = yt.streams.get_highest_resolution()
 					yt.register_on_progress_callback(on_progress)
-					video.download()
+					video.download(output_path="Vídeos-baixados")
 				except VideoUnavailable:
 					print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
 				except KeyboardInterrupt:
@@ -148,7 +148,7 @@ MENU:
 						stream = video.streams.get_highest_resolution()
 						print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
 						try:
-							stream.download(output_path='Playlist YT')
+							stream.download(output_path="Playlist YT")
 						except VideoUnavailable:
 							print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
 							print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
