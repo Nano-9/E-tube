@@ -39,7 +39,7 @@ mensagem_boas_vindas = "Seja bem vindo ao E-tube!"
 for letra in mensagem_boas_vindas:
 	print("\033[1;36m{}\033[m".format(letra), end='', flush=True)
 	suspender(0.1)
-suspender(1.1)
+suspender(0.8)
 os.system("clear")
 
 try:
@@ -54,7 +54,7 @@ else:
 		banner.change_banner()
 		print("""
 
-> Coded by: Lucas-DK
+> Coded by: Lucas-Dk
 > Meu GitHub: https://github.com/lucas-Dk
 > Reporte erros: https://www.facebook.com/Walker.Lxrd/
 
