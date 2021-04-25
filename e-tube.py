@@ -4,6 +4,7 @@
 # ////
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
+
 try:
 	import sys
 	from pytube import YouTube, Playlist
