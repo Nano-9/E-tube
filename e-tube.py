@@ -1,3 +1,5 @@
+# Autor: lucas-Dk
+# Meu github: https://github.com/lucas-Dk
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
 try:
@@ -219,7 +221,7 @@ MENU:
 					print("\033[1;33mEntre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 			elif user == 6:
-				
+
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
 ---------------------------------------------------------------
