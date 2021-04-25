@@ -219,17 +219,17 @@ MENU:
 					print("\033[1;33mEntre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 			elif user == 6:
-
-				os.system("clear")
+				
 				print("""
-\033[1;33m[+] Para contato:\033[m
+\n\033[1;33m[+] Para contato:\033[m
 ---------------------------------------------------------------
 \033[1;4mE-mail:\033[m lucas2000bss@gmail.com
 \033[1;4mFacebook:\033[m https://www.facebook.com/Walker.Lxrd/
 ---------------------------------------------------------------
 \033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
-
+				back_menu = input("Enter para voltar ao menu: ")
+				os.system("clear")
 			else:
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
