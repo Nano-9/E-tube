@@ -4,6 +4,7 @@
 # ////
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
+arquivo = "links"
 try:
 	import sys
 	from pytube import YouTube, Playlist
@@ -11,6 +12,7 @@ try:
 	import urllib.request
 	import os
 	import banner
+	import historico
 except:
 	
 	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca Pytube\033[m")
@@ -20,6 +22,10 @@ except:
 else:
 	pass
 print()
+if not historico.existe(arquivo):
+	historico.criar(arquivo)
+if historico.existe(arquivo) == True:
+	pass
 
 previousprogress = 0
 def on_progress(stream, chunk, bytes_remaining):
