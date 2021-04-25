@@ -1,5 +1,7 @@
 # Autor: lucas-Dk
 # Meu github: https://github.com/lucas-Dk
+# Meu facebook: https://www.facebook.com/Walker.Lxrd/
+# ////
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
 try:
