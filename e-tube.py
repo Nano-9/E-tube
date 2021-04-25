@@ -100,7 +100,6 @@ MENU:
 					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
 				url_video = link
 				yt = YouTube(url_video)
-				hitorico.adicionar_links(arq=arquivo,dados=link,argumentos="Video solo")
 
 				print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
 
@@ -140,7 +139,6 @@ MENU:
 					PLAYLIST_URL = link_play
 					playlist = Playlist(PLAYLIST_URL)
 					tamanho_da_playlist = 0
-					historico.adicionar_links(arq=arquivo,dados=PLAYLIST_URL,argumentos="Playlist")
 					for videos in playlist:
 						tamanho_da_playlist += 1
 					print()
@@ -186,7 +184,6 @@ MENU:
 				else:
 					url_download = link
 					yt = YouTube(url_download)
-					historico.adicionar_links(arq=arquivo,dados=url_download,argumentos="Video solo")
 					print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
 					for streams in yt.streams.filter(only_audio=True):
 						print("\033[1;31m[Música]\033[m \033[1;33m{}\033[m".format(streams))
@@ -261,7 +258,6 @@ MENU:
 			os.system("clear")
 
 # Fim do script
-
 
 
 
