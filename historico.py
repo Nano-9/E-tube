@@ -27,9 +27,9 @@ def adicionar_links(arq, dados, arg):
 	else:
 		try:
 			if arg == "[ Link(s) de Playlist(s) ]":
-				file.write("{}:\n{}\n".format(arg,dados))
+				file.write("\n\n{}:\n\n{}\n".format(arg,dados))
 			elif arg == "[ Link(s) de Video(s) ]":
-				file.write("{}:\n{}\n".format(arg,dados))
+				file.write("\n\n{}:\n{}\n".format(arg,dados))
 		except:
 			print("Impossível escrever no arquivo!")
 		else:
