@@ -24,7 +24,7 @@ O que mudou?
 - Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
 - de algum vídeo, rode o script links.py que você achará!
  
-> Quatro opções novas implementadas. São elas:
+# Quatro opções novas implementadas. São elas:
 
 - Baixar música
 - Mudar a cor do banner de entrada
