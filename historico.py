@@ -19,15 +19,21 @@ def criar(arq):
 	else:
 		return True
 
-def Adicionar_links(arq, dados):
+def adicionar_links(arq, dados, argumentos=None):
 	try:
 		file = open(arq, "at")
 	except:
 		print("Impossível abrir esse arquivo!")
 	else:
 		try:
-			file.write("{}\n".format(dados))
+			if argumentos != None:
+				if argumentos == "Playlist"
+					file.write("{}:\n{}\n".format(argumentos,dados))
+				elif argumentos == "Video solo":
+					file.write("{}:\n{}\n".format(arqgumentos,dados))
+			else:
+				return False
 		except:
-			print("Impossível escrever no arquivo!")
+			return False
 		else:
-			pass
+			return True
