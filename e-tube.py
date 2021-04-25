@@ -4,7 +4,6 @@
 # ////
 # Necessário internet
 # Ele não deixa rodar o código se não tiver internet
-arquivo = "links"
 try:
 	import sys
 	from pytube import YouTube, Playlist
@@ -12,7 +11,7 @@ try:
 	import urllib.request
 	import os
 	import banner
-	import historico
+	from historico import *
 except Exception as E:
 	
 	print(E)
@@ -23,9 +22,10 @@ except Exception as E:
 else:
 	pass
 print()
-if not historico.existe(arquivo):
-	historico.criar(arquivo)
-if historico.existe(arquivo) == True:
+arquivo = "links"
+if not existe(arquivo):
+	criar(arquivo)
+if existe(arquivo) == True:
 	pass
 
 previousprogress = 0
@@ -95,6 +95,7 @@ MENU:
 				print()
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
+					adicionar_links(arq=arquivo,dados=link)
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -132,6 +133,7 @@ MENU:
 				print()
 				try:
 					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
+					adicionar_links(arq=arquivo,dados=link_play)
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -178,6 +180,7 @@ MENU:
 				print("\033[1;31m[Atenção]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
+					adicionar_links(arq=arquivo,dados=link)
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -259,5 +262,6 @@ MENU:
 			os.system("clear")
 
 # Fim do script
+
 
 
