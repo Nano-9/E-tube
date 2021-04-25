@@ -10,6 +10,18 @@ O que mudou?
 - Script mais interativo e colorido para deixar mais fácil o uso. (atualização de hoje 21/04/2021)
 - Progresso de download de vídeos adicionada! (atualização de hoje 22/04/2021)
 - Adicionado um patch de reparo. Opção 5 no script. (atualização de hoje 24/04/2021)
+- Adicionado a opção de histórico, onde seus links de vídeos favoritos ficam salvos! (Atualização de hoje 25/04/2021)
+
+# Função histórico?
+- Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlist preferidas
+> Como usá-la?
+
+- Rode esse comando dentro da pasta do script E-tube:
+- python links.py --visualizar ou --v
+- Em seguida todo o histórico de links vai aparecer para você!
+
+> Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
+> de algum vídeo, rode o script link.py que você achará!
  
 > Quatro opções novas implementadas. São elas:
 
