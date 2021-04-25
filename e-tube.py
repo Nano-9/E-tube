@@ -61,8 +61,6 @@ else:
 		banner.change_banner()
 		print("""
 
-[ EM  MANUTENÇAÕ... NOVAS FUNCIONALIDADES CHEGANDO ]
-
 > Coded by: Lucas-Dk
 > Meu GitHub: https://github.com/lucas-Dk
 > Reporte erros: https://www.facebook.com/Walker.Lxrd/
