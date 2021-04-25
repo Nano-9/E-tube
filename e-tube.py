@@ -94,13 +94,13 @@ MENU:
 				print()
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
-					hitorico.adicionar_links(arq=arquivo,dados=link,argumentos="Video solo")
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
 					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
 				url_video = link
 				yt = YouTube(url_video)
+				hitorico.adicionar_links(arq=arquivo,dados=link,argumentos="Video solo")
 
 				print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
 
@@ -132,7 +132,6 @@ MENU:
 				print()
 				try:
 					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
-					historico.adicionar_links(arq=arquivo,dados=link_play,argumentos="Playlist")
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -141,6 +140,7 @@ MENU:
 					PLAYLIST_URL = link_play
 					playlist = Playlist(PLAYLIST_URL)
 					tamanho_da_playlist = 0
+					historico.adicionar_links(arq=arquivo,dados=PLAYLIST_URL,argumentos="Playlist")
 					for videos in playlist:
 						tamanho_da_playlist += 1
 					print()
@@ -179,7 +179,6 @@ MENU:
 				print("\033[1;31m[Atenção]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
-					historico.adicionar_links(arq=arquivo,dados=link,argumentos="Video solo")
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -187,6 +186,7 @@ MENU:
 				else:
 					url_download = link
 					yt = YouTube(url_download)
+					historico.adicionar_links(arq=arquivo,dados=url_download,argumentos="Video solo")
 					print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
 					for streams in yt.streams.filter(only_audio=True):
 						print("\033[1;31m[Música]\033[m \033[1;33m{}\033[m".format(streams))
