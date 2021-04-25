@@ -94,6 +94,7 @@ MENU:
 				print()
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
+					hitorico.adicionar_links(arq=arquivo,dados=link,argumentos="Video solo")
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -131,6 +132,7 @@ MENU:
 				print()
 				try:
 					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
+					historico.adicionar_links(arq=arquivo,dados=link_play,argumentos="Playlist")
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
@@ -177,6 +179,7 @@ MENU:
 				print("\033[1;31m[Atenção]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
+					historico.adicionar_links(arq=arquivo,dados=link,argumentos="Video solo")
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
