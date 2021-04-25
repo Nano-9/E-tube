@@ -3,7 +3,7 @@
 def existe(arq):
 	resultado = False
 	try:
-		fil = open(arq, "rt")
+		file = open(arq, "rt")
 	except:
 		resultado = False
 		return resultado
@@ -26,10 +26,10 @@ def adicionar_links(arq, dados, arg):
 		print("Impossível abrir esse arquivo!")
 	else:
 		try:
-			if arg == "[ Link(s) de Playlist(s) ]":
-				file.write("\n\n{}:\n\n{}\n".format(arg,dados))
-			elif arg == "[ Link(s) de Video(s) ]":
-				file.write("\n\n{}:\n{}\n".format(arg,dados))
+			if arg == "[LINKS DAS PLAYLISTS]":
+				file.write("\n{}:\n{}\n".format(arg,dados))
+			elif arg == "[LINKS DE VIDEOS]":
+				file.write("\n{}:\n{}\n".format(arg,dados))
 		except:
 			print("Impossível escrever no arquivo!")
 		else:
