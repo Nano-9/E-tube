@@ -179,8 +179,7 @@ MENU:
 			elif user == 3:
 
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
-				print("\033[1;32m[+] A música ficará salva na pasta do script!\033[m")
-				print("\033[1;31m[Atenção]: Essa opção por enquanto não converte o vídeo para .MP3\033[m")
+				print("\033[1;32m[+] A música ficará salva na pasta do script!\033[m\n")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
 					adicionar_links(arq=arquivo,dados=link,arg="[LINKS DE VIDEOS]")
@@ -272,6 +271,7 @@ MENU:
 			os.system("clear")
 
 # Fim do script
+
 
 
 
