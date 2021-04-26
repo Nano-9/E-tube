@@ -13,11 +13,14 @@ try:
 	import os
 	import banner
 	from historico import *
+	from convertervp3 import *
+	import moviepy.editor as mp
 except Exception as E:
 	
 	print(E)
-	print("\n\033[1;31m[ERROR]: Parece que você não instalou a biblioteca Pytube\033[m")
+	print("\n\033[1;31m[ERROR]: Ops aconteceu algo inesperado! Siga as instruções abaixo:\033[m")
 	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt")
+	print("\n\033[1;33m[+] Digite esse comando:\033[m python setup.py")
 	print("\n\033[1;31mE tente novamente!\033[m")
 	sys.exit()
 else:
@@ -196,7 +199,7 @@ MENU:
 					try:
 						musica = yt.streams.get_highest_resolution()
 						yt.register_on_progress_callback(on_progress)
-						musica.download()
+						musica.download(output_path="Músicas")
 					except:
 						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
 						suspender(1)
@@ -204,6 +207,13 @@ MENU:
 					else:
 
 						print("\n\033[1;31m[+] Download completo!\033[m\n")
+						converte = str(input("Deseja converter esse vídeo para .mp3? [Y/N]:  ")).upper()[0]
+						while converte not in "Y" and converter not in "N":
+							converte = str(input("Deseja converter esse vídeo para .mp3? [Y/N]: ")).upper()[0]
+						if converte == "Y":
+							converter_video_para_mp3()
+						elif converte == "N":
+							pass
 						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 						suspender(2)
 						os.system("clear")
