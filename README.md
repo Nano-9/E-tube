@@ -11,6 +11,7 @@ O que mudou?
 - Progresso de download de vídeos adicionada! (atualização de hoje 22/04/2021)
 - Adicionado um patch de reparo. Opção 5 no script. (atualização de hoje 24/04/2021)
 - Adicionado a função histórico, onde seus links de vídeos favoritos ficam salvos! (Atualização de hoje 25/04/2021)
+- Adicionado a opção de converter para um MP3 na opção 3! (atualização de hoje 26/04/2021)
 
 # Função histórico?
 - Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlists preferidas
