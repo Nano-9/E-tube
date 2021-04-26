@@ -20,7 +20,7 @@ except Exception as E:
 	print(E)
 	print("\n\033[1;31m[ERROR]: Ops aconteceu algo inesperado! Siga as instruções abaixo:\033[m")
 	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt")
-	print("\n\033[1;33m[+] Digite esse comando:\033[m python setup.py")
+	print("\n\033[1;33m[+] Digite esse comando:\033[m python3 setup.py")
 	print("\n\033[1;31mE tente novamente!\033[m")
 	sys.exit()
 else:
