@@ -40,8 +40,8 @@ Script para downloads de video/playlists de video/ música do youtube
 # Terá mais atualizações?
 - Sim
 
-### Como instalar o script?:
-### Siga os passos abaixo para instalar corretamente o E-tube:
+#### Como instalar o script?
+#### Siga os passos abaixo para instalar corretamente o E-tube:
 
 # PASSOS PARA USUÁRIOS DO TERMUX!!!
 
