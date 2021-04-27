@@ -231,6 +231,7 @@ MENU:
 					# comandos para reparar o erro do E-tube
 					print("\n\033[1;31m[+] Reparando o script...\033[m\n")
 
+					os.system("pip install --upgrade pip")
 					os.system("pip uninstall pytube -y")
 					os.system("pip install -r requirements.txt")
 
@@ -238,7 +239,7 @@ MENU:
 					print("\033[1;32m[+] Abrindo o E-tube...")
 					suspender(1.4)
 					os.system("clear")
-					os.system("python e-tube.py")
+					os.system("python3 e-tube.py")
 				else:
 					print("\033[1;31mDesculpe! O seu sistema pode apresentar falhas com esse path\033[m")
 					print("\033[1;33mEntre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
@@ -271,6 +272,7 @@ MENU:
 			os.system("clear")
 
 # Fim do script
+
 
 
 
