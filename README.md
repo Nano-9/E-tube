@@ -37,15 +37,13 @@ Script para downloads de video/playlists de video/ música do youtube
 
 # [Clique aqui para ver uma foto do script](https://user-images.githubusercontent.com/69327287/116237218-53be8700-a736-11eb-85c1-4028580fe575.png)
 
-> Terá mais atualizações?
-
+# Terá mais atualizações?
 - Sim
 
 # Como instalar o script?:
-
 # Siga os passos abaixo para instalar corretamente o E-tube:
 
-#### PASSOS PARA USUÁRIOS DO TERMUX!!!
+# PASSOS PARA USUÁRIOS DO TERMUX!!!
 
 - Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
 - Termux: cd storage/downloads
@@ -58,7 +56,7 @@ Script para downloads de video/playlists de video/ música do youtube
 - python3 e-tube.py
 - Pronto, já está rodando o meu script e já pode baixar os vídeos!
 
-#### PASSOS PARA USUÁRIOS DO PC/LINUX!!!
+# PASSOS PARA USUÁRIOS DO PC/LINUX!!!
 
 - Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
 - Terminal: cd \Users\Cliente\Downloads (cole o caminho assim, lembrando que o seu pode ta diferente, cole certo!)
@@ -84,7 +82,7 @@ você vai encontrar o áudio do vídeo que foi convertido para mp3
 
 # Para acessar os vídeos rapidamente pelo terminal:
 
-- #### PASSOS PARA USUÁRIOS DO TERMUX!!!
+- ##PASSOS PARA USUÁRIOS DO TERMUX!!!
 - saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
 - cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
@@ -96,7 +94,7 @@ podem usar este > https://play.google.com/store/apps/details?id=com.alphainvento
 - Abra a pasta E-tube
 - E ai dentro vai ter todas as pastas/músicas.mp3
 
-- #### PASSOS PARA USUÁRIOS DO PC/LINUX!!!
+- ## PASSOS PARA USUÁRIOS DO PC/LINUX!!!
 - saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
 - cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
