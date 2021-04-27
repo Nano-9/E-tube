@@ -84,11 +84,11 @@ você vai encontrar o áudio do vídeo que foi convertido para mp3
 # Para acessar os vídeos rapidamente pelo terminal:
 
 ## PASSOS PARA USUÁRIOS DO TERMUX!!!
-- saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
+- Saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
 - cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
 - Se quiserem usar um gerenciador de arquivos para achar mais rápido ainda:
-- podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
+- Podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
 
 - Abra o gerenciador
 - Abra a pasta Downloads que vai aparecer de primeira para você!
@@ -97,7 +97,7 @@ você vai encontrar o áudio do vídeo que foi convertido para mp3
 
 ## PASSOS PARA USUÁRIOS DO PC/LINUX!!!
 
-- saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
+- Saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
 - cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
 
