@@ -49,7 +49,8 @@ Script para downloads de video/playlists de video/ música do youtube
 # PASSOS PARA USUÁRIOS DO TERMUX!!!
 
 - Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
-- Termux: cd storage/downloads
+- termux-setup-storage
+- cd storage/downloads
 - git clone https://github.com/lucas-Dk/E-tube
 - cd E-tube
 - pip install --upgrade pip
@@ -61,7 +62,7 @@ Script para downloads de video/playlists de video/ música do youtube
 # PASSOS PARA USUÁRIOS DO PC/LINUX!!!
 
 - Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
-- Terminal: cd \Users\Cliente\Downloads (cole o caminho assim, lembrando que o seu pode ta diferente, cole certo!)
+- cd \Users\Cliente\Downloads (cole o caminho assim, lembrando que o seu pode ta diferente, cole certo!)
 - git clone https://github.com/lucas-Dk/E-tube
 - cd E-tube
 - pip install --upgrade pip
@@ -105,5 +106,4 @@ podem usar este > https://play.google.com/store/apps/details?id=com.alphainvento
 
 
 > script by > Lucas-DK
-
 
