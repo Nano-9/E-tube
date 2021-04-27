@@ -35,68 +35,74 @@ O que mudou?
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
 
+# [Clique aqui para ver uma foto do script](https://user-images.githubusercontent.com/69327287/116237218-53be8700-a736-11eb-85c1-4028580fe575.png)
+
 > Terá mais atualizações?
 
 - Sim
 
-# Como usar:
+# Como instalar o script?:
 
-> Vocês vão precisar clonar este repositório do pytube ou digitar pip install -r requirements.txt 
+# Siga os passos abaixo para instalar corretamente o E-tube:
 
-- git clone https://github.com/nficano/pytube
+#### PASSOS PARA USUÁRIOS DO TERMUX!!!
 
-- E dar os comandos:
-
-- cd pytube
-
-- pip install .   (sim, tem o ponto final)
-
-> Feito isso vocês vão clonar o meu script dentro da pasta do pytube
-
+- Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
+- Termux: cd storage/downloads
 - git clone https://github.com/lucas-Dk/E-tube
-
-- Em seguida irão dar esses comandos:
-
-- No linux > ls
-
-- No windows > dir
-
-- No termux > ls
-
-> Em seguida irão dar este comando
-
 - cd E-tube
-
+- pip install --upgrade pip
+- pip install -r requirements.txt
+- Dessa forma o pytube vai ser instalado!
+- python3 setup.py
 - python3 e-tube.py
+- Pronto, já está rodando o meu script e já pode baixar os vídeos!
 
-- Pronto, ja tem o meu script! Pode fazer o download dos vídeos
+#### PASSOS PARA USUÁRIOS DO PC/LINUX!!!
+
+- Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
+- Terminal: cd \Users\Cliente\Downloads (cole o caminho assim, lembrando que o seu pode ta diferente, cole certo!)
+- git clone https://github.com/lucas-Dk/E-tube
+- cd E-tube
+- pip install --upgrade pip
+- pip install -r requirements.txt
+- Dessa forma o pytube vai ser instalado!
+- python3 setup.py
+- python3 e-tube.py
+- Pronto, já está rodando o meu script e já pode baixar os vídeos!
 
 # Onde fica o video baixado?
 
-- O processo de download armazena o vídeo dentro da pasta do script
-mas você pode mover a pasta do script para a área de downloads
-podendo acessar o mesmo através de um gerenciador de arquivos.
-O processo de download de uma playlist armazena os vídeos dentro
-de uma pasta no script chamada > playlist
+- O processe de downloads de vídeos/playlist ou o MP3 do arquivo, todos
+ficam armazenados dentro das pastas com os respectivos nomes:
 
-- Para acessar os vídeos, abra essa pasta.
+- Vídeos-baixados (armazena apenas vídeos)
+- Playlist YT (armazena apenas as playlists)
+- Músicas (armazena o vídeo que será convertido para MP3)
+- Fora dessas pastas, na parte onde você encontra o script e etc
+você vai encontrar o áudio do vídeo que foi convertido para mp3
 
-- podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
+# Para acessar os vídeos rapidamente pelo terminal:
 
-# Como mover o script?
+- #### PASSOS PARA USUÁRIOS DO TERMUX!!!
+- saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
+- cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
+- cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
+- Se quiserem usar um gerenciador de arquivos para achar mais rápido ainda, usem esse:
+podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
 
-> É bem simples siga os comandos no linux
+- Abra o gerenciador
+- Abra a pasta Downloads que vai aparecer de primeira para você!
+- Abra a pasta E-tube
+- E ai dentro vai ter todas as pastas/músicas.mp3
 
-- Acesse o diretório de downloads
+- #### PASSOS PARA USUÁRIOS DO PC/LINUX!!!
+- saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
+- cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
+- cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
 
-- Digite pwd, de enter e copie o caminho que vai aparecer
 
-- Volte e vá ate onde a pasta do script está
 
-> digite este comando:
 
-- mv -v pytube aqui vocês colam o caminho que copiaram e de enter
-
-- Pronto arquivo movido, podem acessar quando quiser!
 
 > script by > Lucas-DK
