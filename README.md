@@ -74,8 +74,7 @@ Script para downloads de video/playlists de video/ música do youtube
 # Onde fica o video baixado?
 
 - O processe de downloads de vídeos/playlist ou o MP3 do arquivo, todos
-ficam armazenados dentro das pastas com os respectivos nomes:
-
+- ficam armazenados dentro das pastas com os respectivos nomes:
 - Vídeos-baixados (armazena apenas vídeos)
 - Playlist YT (armazena apenas as playlists)
 - Músicas (armazena o vídeo que será convertido para MP3)
@@ -88,8 +87,8 @@ você vai encontrar o áudio do vídeo que foi convertido para mp3
 - saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
 - cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
-- Se quiserem usar um gerenciador de arquivos para achar mais rápido ainda, usem esse:
-podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
+- Se quiserem usar um gerenciador de arquivos para achar mais rápido ainda:
+- podem usar este > https://play.google.com/store/apps/details?id=com.alphainventor.filemanager
 
 - Abra o gerenciador
 - Abra a pasta Downloads que vai aparecer de primeira para você!
@@ -97,6 +96,7 @@ podem usar este > https://play.google.com/store/apps/details?id=com.alphainvento
 - E ai dentro vai ter todas as pastas/músicas.mp3
 
 ## PASSOS PARA USUÁRIOS DO PC/LINUX!!!
+
 - saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
 - cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
