@@ -54,7 +54,6 @@ Script para downloads de video/playlists de video/ música do youtube
 - cd E-tube
 - pip install --upgrade pip
 - pip install -r requirements.txt
-- Dessa forma o pytube vai ser instalado!
 - python3 setup.py
 - python3 e-tube.py
 - Pronto, já está rodando o meu script e já pode baixar os vídeos!
@@ -67,7 +66,6 @@ Script para downloads de video/playlists de video/ música do youtube
 - cd E-tube
 - pip install --upgrade pip
 - pip install -r requirements.txt
-- Dessa forma o pytube vai ser instalado!
 - python3 setup.py
 - python3 e-tube.py
 - Pronto, já está rodando o meu script e já pode baixar os vídeos!
@@ -107,3 +105,5 @@ podem usar este > https://play.google.com/store/apps/details?id=com.alphainvento
 
 
 > script by > Lucas-DK
+
+
