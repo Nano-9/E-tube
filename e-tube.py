@@ -60,7 +60,7 @@ try:
 except:
 	print("\n\033[1;31m[ERROR]: Você não está conectado a internet :( \033[m\n")
 else:
-	os.system("chmod +x banner.py e-tube.py historico.py links.py")
+	os.system("chmod +x banner.py e-tube.py historico.py links.py convertervp3.py setup.py")
 	os.system("clear")
 	while True:
 		banner.change_banner()
