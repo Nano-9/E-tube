@@ -206,9 +206,10 @@ MENU:
 					else:
 
 						print("\n\033[1;31m[+] Download completo!\033[m\n")
-						converte = str(input("Deseja converter esse vídeo para .mp3? [Y/N]:  ")).upper()[0]
+						converte = str(input("\033[1;31mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
 						while converte not in "Y" and converte not in "N":
-							converte = str(input("Deseja converter esse vídeo para .mp3? [Y/N]: ")).upper()[0]
+							print("\033[1;31m[ERROR]:\033[m Por favor, digite uma opção válida!")
+							converte = str(input("\033[1;31mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
 						if converte == "Y":
 							converter_video_para_mp3()
 						elif converte == "N":
@@ -241,7 +242,7 @@ MENU:
 					os.system("clear")
 					os.system("python3 e-tube.py")
 				else:
-					print("\033[1;31mDesculpe! O seu sistema pode apresentar falhas com esse path\033[m")
+					print("\033[1;31mDesculpe! O seu sistema pode apresentar falhas com esse patch\033[m")
 					print("\033[1;33mEntre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 			elif user == 6:
