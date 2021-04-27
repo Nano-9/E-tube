@@ -15,13 +15,14 @@ O que mudou?
 
 # Função histórico?
 - Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlists preferidas
-> Como usá-la?
+
+# Como usar a função histórico?
 
 - Rode esse comando dentro da pasta do script E-tube:
 - python links.py --visualizar ou --v
 - Em seguida todo o histórico de links vai aparecer para você!
 
-# Ajuda a encontrar vídeos esquecidos:
+# [Função Histórico] Ajuda a encontrar vídeos esquecidos:
 - Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
 - de algum vídeo, rode o script links.py que você achará!
  
@@ -40,8 +41,10 @@ Script para downloads de video/playlists de video/ música do youtube
 # Terá mais atualizações?
 - Sim
 
-#### Como instalar o script?
-#### Siga os passos abaixo para instalar corretamente o E-tube:
+
+# Como instalar o script?
+- Siga os passos abaixo para instalar corretamente o E-tube:
+
 
 # PASSOS PARA USUÁRIOS DO TERMUX!!!
 
