@@ -73,7 +73,7 @@ Script para downloads de video/playlists de video/ música do youtube
 
 # Onde fica o video baixado?
 
-- O processe de downloads de vídeos/playlist ou o MP3 do arquivo, todos
+- O processo de downloads de vídeos/playlist ou o MP3 do arquivo, todos
 - ficam armazenados dentro das pastas com os respectivos nomes:
 - Vídeos-baixados (armazena apenas vídeos)
 - Playlist YT (armazena apenas as playlists)
