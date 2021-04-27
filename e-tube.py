@@ -207,7 +207,7 @@ MENU:
 
 						print("\n\033[1;31m[+] Download completo!\033[m\n")
 						converte = str(input("Deseja converter esse vídeo para .mp3? [Y/N]:  ")).upper()[0]
-						while converte not in "Y" and converter not in "N":
+						while converte not in "Y" and converte not in "N":
 							converte = str(input("Deseja converter esse vídeo para .mp3? [Y/N]: ")).upper()[0]
 						if converte == "Y":
 							converter_video_para_mp3()
