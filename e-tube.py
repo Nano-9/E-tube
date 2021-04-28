@@ -179,7 +179,8 @@ MENU:
 			elif user == 3:
 
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
-				print("\033[1;32m[+] A música ficará salva na pasta do script!\033[m\n")
+				print("\033[1;32m[+] Os vídeos que serão convertidos para um MP3 ficarão dentro da pasta > VideosConvertidos\033[m")
+				print("\033[1;32m[+] O áudio.mp3 que foi feito do vídeo, ficará salvo fora das pastas mas dentro da pasta E-tube\n\033[m")
 				try:
 					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
 					adicionar_links(arq=arquivo,dados=link,arg="[LINKS DE VIDEOS]")
@@ -198,22 +199,28 @@ MENU:
 					try:
 						musica = yt.streams.get_highest_resolution()
 						yt.register_on_progress_callback(on_progress)
-						musica.download(output_path="Músicas")
+						musica.download(output_path="VideosConvertidos")
 					except:
 						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
 						suspender(1)
 						sys.exit()
 					else:
-
 						print("\n\033[1;32m[+] Download completo!\033[m\n")
-						converte = str(input("\033[1;33mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
-						while converte not in "Y" and converte not in "N":
-							print("\033[1;31m[ERROR]:\033[m Por favor, digite uma opção válida!")
+						try:
 							converte = str(input("\033[1;33mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
-						if converte == "Y":
-							converter_video_para_mp3()
-						elif converte == "N":
-							pass
+							while converte not in "Y" and converte not in "N":
+								print("\033[1;31m[ERROR]:\033[m Por favor, digite uma opção válida!")
+								converte = str(input("\033[1;33mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
+						except IndexError:
+								print("\033[1;91m[ATENÇÃO]: Essa opção não pode ficar vazia! Tente novamente!\033[m")
+								print("\n\033[1;31mSaindo...\033[m\n")
+								suspender(0.5)
+								sys.exit()
+						else:
+							if converte == "Y":
+								converter_video_para_mp3()
+							elif converte == "N":
+								pass
 						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 						suspender(2)
 						os.system("clear")
@@ -273,9 +280,3 @@ MENU:
 			os.system("clear")
 
 # Fim do script
-
-
-
-
-
-
