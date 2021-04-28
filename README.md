@@ -87,6 +87,9 @@ Script para downloads de video/playlists de video/ música do youtube
 - Fora dessas pastas, na parte onde você encontra o script e etc
 você vai encontrar o áudio do vídeo que foi convertido para mp3
 
+- ![Exemplo](https://user-images.githubusercontent.com/69327287/116333196-7047d700-a7a9-11eb-9494-c5a098982baf.png)
+
+
 # Para acessar os vídeos rapidamente pelo terminal:
 
 ## PASSOS PARA USUÁRIOS DO TERMUX!!!
