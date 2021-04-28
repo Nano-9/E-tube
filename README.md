@@ -26,12 +26,17 @@ O que mudou?
 - Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
 - de algum vídeo, rode o script links.py que você achará!
  
-# Quatro opções novas implementadas. São elas:
+# Cinco opções novas implementadas. São elas:
 
 - Baixar música
 - Mudar a cor do banner de entrada
 - Meios de contato para falar comigo
 - Reparar erros do script
+- Na opção 3 o vídeo pode ser convertido para um audio.mp3
+
+# COMO FAZER A CONVERSÃO? [Siga o exemplo abaixo]:
+
+- ![clique aqui para ver o exemplo](https://user-images.githubusercontent.com/69327287/116332575-670a3a80-a7a8-11eb-9cd0-9caa88bf341d.png)
 
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
