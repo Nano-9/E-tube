@@ -77,7 +77,7 @@ Script para downloads de video/playlists de video/ música do youtube
 - ficam armazenados dentro das pastas com os respectivos nomes:
 - Vídeos-baixados (armazena apenas vídeos)
 - Playlist YT (armazena apenas as playlists)
-- Músicas (armazena o vídeo que será convertido para MP3)
+- VideosConvertidos (armazena o vídeo que será/foi convertido para MP3)
 - Fora dessas pastas, na parte onde você encontra o script e etc
 você vai encontrar o áudio do vídeo que foi convertido para mp3
 
