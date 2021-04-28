@@ -41,7 +41,8 @@ O que mudou?
 # E-tube
 Script para downloads de video/playlists de video/ música do youtube
 
-# [Clique aqui para ver uma foto do script](https://user-images.githubusercontent.com/69327287/116237218-53be8700-a736-11eb-85c1-4028580fe575.png)
+- ![Clique aqui para ver o script](https://user-images.githubusercontent.com/69327287/116332915-fc0d3380-a7a8-11eb-883c-f403b46f2bb5.png)
+
 
 # Terá mais atualizações?
 - Sim
