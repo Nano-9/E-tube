@@ -19,8 +19,8 @@ except Exception as E:
 	
 	print(E)
 	print("\n\033[1;31m[ERROR]: Ops aconteceu algo inesperado! Siga as instruções abaixo:\033[m")
-	print("\n\033[1;33m[+] Digite esse comando:\033[m pip install -r requirements.txt")
-	print("\n\033[1;33m[+] Digite esse comando:\033[m python3 setup.py")
+	print("\n\033[1;33m[*] Digite esse comando:\033[m pip install -r requirements.txt")
+	print("\n\033[1;33m[*] Digite esse comando:\033[m python3 setup.py")
 	print("\n\033[1;31mE tente novamente!\033[m")
 	sys.exit()
 else:
@@ -54,7 +54,7 @@ suspender(0.8)
 os.system("clear")
 
 try:
-	print("\033[1;31m[+] Verificando se você está conectado na internet...\033[m")
+	print("\033[1;31m[!] Verificando se você está conectado na internet...\033[m")
 	suspender(1.4)
 	connection = urllib.request.urlopen("https://www.google.com.br")
 except:
@@ -106,7 +106,7 @@ MENU:
 				url_video = link
 				yt = YouTube(url_video)
 
-				print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
+				print("\n\033[1;31m[!] Buscando streams diponíveis para download...\033[m\n")
 
 				for streams in yt.streams.filter(file_extension="mp4"):
 					print("\033[1;31m[Vídeo]\033[m \033[1;33m{}\033[m".format(streams))
@@ -123,7 +123,7 @@ MENU:
 					print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
 					suspender(1)
 					sys.exit()
-				print("\n\033[1;96m[+] Download completo do vídeo!\033[m")
+				print("\n\033[1;96m[!] Download completo do vídeo!\033[m")
 				print("\033[1;35m[+] Voltando ao menu...\033[m")
 				suspender(2)
 				os.system("clear")
@@ -149,10 +149,10 @@ MENU:
 						tamanho_da_playlist += 1
 					print()
 					print("\n\033[1;32mSobre a sua playlist:\033[m\n")
-					print("\033[1;31m[+] Nome:\033[m {}".format(playlist.title))
-					print("\033[1;31m[+] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
-					print("\033[1;31m[+] link quebrado:\033[m o vídeo é pulado!")
-					print("\033[1;31m[+] Local de armazenamento:\033[m pasta Playlist YT")
+					print("\033[1;31m[*] Nome:\033[m {}".format(playlist.title))
+					print("\033[1;31m[*] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
+					print("\033[1;31m[*] link quebrado:\033[m o vídeo é pulado!")
+					print("\033[1;31m[*] Local de armazenamento:\033[m pasta Playlist YT")
 					print()
 					print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
 					tamanho_da_playlist = 0
@@ -171,7 +171,7 @@ MENU:
 							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
 						else:
 							pass
-					print("\n\033[1;32m[+] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
+					print("\n\033[1;32m[!] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
 					print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 					suspender(2)
 					os.system("clear")
@@ -191,7 +191,7 @@ MENU:
 				else:
 					url_download = link
 					yt = YouTube(url_download)
-					print("\n\033[1;31m[+] Buscando streams diponíveis para download...\033[m\n")
+					print("\n\033[1;31m[!] Buscando streams diponíveis para download...\033[m\n")
 					for streams in yt.streams.filter(only_audio=True):
 						print("\033[1;31m[Música]\033[m \033[1;33m{}\033[m".format(streams))
 						suspender(0.5)
@@ -201,16 +201,18 @@ MENU:
 						yt.register_on_progress_callback(on_progress)
 						musica.download(output_path="VideosConvertidos")
 					except:
-						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
+						print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Verifique se está tudo bem com a sua")
+						print("conexão com a internet e tente novamente! Caso persista esse erro, acione a opção 5.\033[m")
+						print("\n\033[1;31mFechando o script...\033[m")
 						suspender(1)
 						sys.exit()
 					else:
-						print("\n\033[1;32m[+] Download completo!\033[m\n")
+						print("\n\033[1;32m[!] Download completo!\033[m\n")
 						try:
 							converte = str(input("\033[1;33mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
 							while converte not in "Y" and converte not in "N":
 								print("\033[1;31m[ERROR]:\033[m Por favor, digite uma opção válida!")
-								converte = str(input("\033[1;33mDeseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
+								converte = str(input("\033[1;33m[!] Deseja converter esse vídeo para .mp3? [Y/N]:\033[m ")).upper()[0]
 						except IndexError:
 								print("\033[1;91m[ATENÇÃO]: Essa opção não pode ficar vazia! Tente novamente!\033[m")
 								print("\n\033[1;31mSaindo...\033[m\n")
@@ -232,25 +234,30 @@ MENU:
 
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
-					print("\n\033[1;32m[+] Atenção: Caso o erro continue entre em contato comigo:\033[m ")
+					print("\n\033[1;32m[!] Atenção: Caso o erro continue entre em contato comigo:\033[m ")
 					print("> https://www.facebook.com/Walker.Lxrd/\n ")
-					seguir_reparo = str(input("Enter para seguir com o reparo: "))
-					os.system("clear")
-					# comandos para reparar o erro do E-tube
-					print("\n\033[1;31m[+] Reparando o script...\033[m\n")
+					try:
+						seguir_reparo = str(input("\033[1;33m[!] Enter para seguir com o reparo:\033[m "))
+					except KeyboardInterrupt:
+						print("\n\033[1;31m[!] Saindo...\033[m")
+						suspender(1)
+						sys.exit()
+					else:
+						os.system("clear")
+						# comandos para reparar o erro do E-tube
+						print("\n\033[1;31m[+] Reparando o script...\033[m\n")
 
-					os.system("pip install --upgrade pip")
-					os.system("pip uninstall pytube -y")
-					os.system("pip install -r requirements.txt")
+						os.system("pip install --upgrade pip")
+						os.system("pip uninstall pytube -y")
+						os.system("pip install -r requirements.txt")
 
-					print("\n\033[1;32m[+] Reparação completa!\033[m\n")
-					print("\033[1;32m[+] Abrindo o E-tube...")
-					suspender(1.4)
-					os.system("clear")
-					os.system("python3 e-tube.py")
+						print("\n\033[1;32m[!] Reparação completa!\033[m")
+						print("\033[1;32m[+] Abrindo o E-tube...\033[m")
+						suspender(1.4)
+						os.system("clear")
 				else:
-					print("\033[1;31mDesculpe! O seu sistema pode apresentar falhas com esse patch\033[m")
-					print("\033[1;33mEntre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
+					print("\033[1;31m[!] Desculpe! O seu sistema pode apresentar falhas com esse patch\033[m")
+					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 			elif user == 6:
 
@@ -262,8 +269,16 @@ MENU:
 ---------------------------------------------------------------
 \033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
-				back_menu = input("Enter para voltar ao menu: ")
-				os.system("clear")
+				try:
+					back_menu = input("Enter para voltar ao menu: ")
+					os.system("clear")
+
+				except KeyboardInterrupt:
+					print("\n\033[1;31mSaindo...\033[m")
+					suspender(1)
+					sys.exit()
+				else:
+					pass
 			else:
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
