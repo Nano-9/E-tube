@@ -111,7 +111,7 @@ você vai encontrar o áudio do vídeo que foi convertido para mp3
 
 - Saia do script e na mesma pasta digite > cd Vídeos-baixados (aqui vão estar todos os vídeos)
 - cd Playlist YT (aqui vão estar todos os vídeos da playlist que você baixou)
-- cd Músicas (aqui vão estar todos os vídeos que foram convertidos para mp3)
+- cd VideosConvertidos (aqui vão estar todos os vídeos que foram convertidos para mp3)
 
 
 
