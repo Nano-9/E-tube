@@ -12,6 +12,8 @@ try:
 	import urllib.request
 	import os
 	import banner
+	import instaloader
+	import pyinsdownloader
 	from historico import *
 	from convertervp3 import *
 	import moviepy.editor as mp
@@ -76,9 +78,10 @@ MENU:
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
 \033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
-\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Reparar erros do script
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Baixar do instagram
+\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Fale comigo
 \033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -226,11 +229,13 @@ MENU:
 						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
 						suspender(2)
 						os.system("clear")
-
 			elif user == 4:
-				os.system("clear")
+				pyinsdownloader.baixar_videos_instagram()
 
 			elif user == 5:
+				os.system("clear")
+
+			elif user == 6:
 
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
@@ -259,7 +264,7 @@ MENU:
 					print("\033[1;31m[!] Desculpe! O seu sistema pode apresentar falhas com esse patch\033[m")
 					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
-			elif user == 6:
+			elif user == 7:
 
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
