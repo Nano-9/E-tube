@@ -30,6 +30,14 @@ O que mudou?
 - Entre nessa pasta e lá vai estar os videos e fotos baixados
 - Já a foto de perfil que você baixar, vai ficar armazenada na pasta com o mesmo nome de usuário!
 
+# Pasta POST:
+![Veja como fica a pasta ](https://user-images.githubusercontent.com/69327287/116791891-b3e55e00-aa93-11eb-902e-901190e3285a.png)
+
+# Arquivos baixados estão dentro da pasta POST:
+![Arquivos baixados ](https://user-images.githubusercontent.com/69327287/116791920-e1caa280-aa93-11eb-8bfe-30d3b5e2317c.png)
+
+
+
 # Função histórico?
 - Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlists preferidas
 
