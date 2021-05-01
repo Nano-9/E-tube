@@ -14,6 +14,8 @@ O que mudou?
 - Adicionado a opção de converter para um MP3 na opção 3! (atualização de hoje 26/04/2021)
 - Mudanças na estética pt(2). (atualização de hoje 29/04/2021)
 - Mudanças para deixar o script mais rápido! (atualização de hoje 29/04/2021)
+- Adicionada a opção de baixar um vídeo/foto/foto do perfil do instagram! (atualização de hoje 01/05/2021)
+
 
 
 # Função histórico?
