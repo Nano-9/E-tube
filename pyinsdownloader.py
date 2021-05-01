@@ -75,11 +75,13 @@ MENU:
 					break
 
 				elif user_escolhe == 3:
-					link_post = str(input("\033[1;33m[+]\033[m Url da foto: "))
+					print()
+					link_post = str(input("\033[1;33m[+]\033[m Url do vídeo: "))
 					if validar_links_instagram(links=link_post):
+						print()
 						fatiar_urls = link_post[28:39]
 						post_instagram = Post.from_shortcode(instancia.context, fatiar_urls)
-						print("\033[1;31m[+] Iniciando o download da imagem...\033[m")
+						print("\033[1;31m[+] Iniciando o download da imagem...\n\033[m")
 						instancia.download_post(post_instagram,target="Post")
 						print("\n\033[1;32m[*] Download completo!")
 						print("\033[1;36mVoltando ao menu...\033[m")
