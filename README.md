@@ -36,6 +36,8 @@ O que mudou?
 # Arquivos baixados estão dentro da pasta POST:
 ![Arquivos baixados ](https://user-images.githubusercontent.com/69327287/116791920-e1caa280-aa93-11eb-8bfe-30d3b5e2317c.png)
 
+# Videos baixados do Instagram ficam dentro da pasta POST:
+![Video fica aqui ](https://user-images.githubusercontent.com/69327287/116792114-11c67580-aa95-11eb-9dbf-f05f1c23c83a.png)
 
 
 # Função histórico?
