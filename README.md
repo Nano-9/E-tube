@@ -17,6 +17,18 @@ O que mudou?
 - Adicionada a opção de baixar um vídeo/foto/foto do perfil do instagram! (atualização de hoje 01/05/2021)
 
 
+# Nova função (Download do Instagram)
+#### Saiba utilizar corretamente:
+
+- Entre com usuário ou email
+- Pegue o link da foto ou vídeo
+- Exemplo de link válido: https://www.instagram.com/p/COVhUQhLBqr/
+
+## Onde encontro os vídeos do instagram?
+
+- O script logo após o download irá criar uma pasta chamada: POST
+- Entre nessa pasta e lá vai estar os videos e fotos baixados
+- Já a foto de perfil que você baixar, vai ficar armazenada na pasta com o mesmo nome de usuário!
 
 # Função histórico?
 - Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlists preferidas
