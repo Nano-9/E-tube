@@ -12,5 +12,6 @@ def instalar_bibliotecas_necessarias():
 	os.system("clear")
 	os.system("pip install --upgrade pip")
 	os.system("pip install ffmpeg moviepy")
+	os.system("pip install instaloader")
 
 instalar_bibliotecas_necessarias()
