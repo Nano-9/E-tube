@@ -17,7 +17,7 @@ def baixar_videos_instagram():
 	os.system("clear")
 	instancia = instaloader.Instaloader()
 	try:
-		user = str(input("\033[1;33[*]\033[m Nome de usuário ou e-mail: "))
+		user = str(input("\033[1;33m[*]\033[m Nome de usuário ou e-mail: "))
 		password = getpass.getpass("Senha: ")
 		print("Logando na sua conta...")
 		instancia.login(user=user,passwd=password)
@@ -44,7 +44,7 @@ MENU:
 				user_escolhe = int(user_escolhe)
 				if user_escolhe == 1:
 					print()
-					link_post = str(input("\033[1;33[+]\033[m Url da foto: "))
+					link_post = str(input("\033[1;33m[+]\033[m Url da foto: "))
 					print()
 					if validar_links_instagram(links=link_post):
 						fatiar_urls = link_post[28:39]
@@ -75,7 +75,7 @@ MENU:
 					break
 
 				elif user_escolhe == 3:
-					link_post = str(input("Url da foto: "))
+					link_post = str(input("\033[1;33m[+]\033[m Url da foto: "))
 					if validar_links_instagram(links=link_post):
 						fatiar_urls = link_post[28:39]
 						post_instagram = Post.from_shortcode(instancia.context, fatiar_urls)
