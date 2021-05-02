@@ -53,13 +53,14 @@ O que mudou?
 - Essa função também facilita na busca por seus vídeos favoritos, caso tenha esquecido
 - de algum vídeo, rode o script links.py que você achará!
  
-# Cinco opções novas implementadas. São elas:
+# Seis opções novas implementadas. São elas:
 
 - Baixar música
 - Mudar a cor do banner de entrada
 - Meios de contato para falar comigo
 - Reparar erros do script
 - Na opção 3 o vídeo pode ser convertido para um audio.mp3
+- Opção de download de video e fotos do Instagram
 
 # COMO FAZER A CONVERSÃO? [Siga o exemplo abaixo]:
 
