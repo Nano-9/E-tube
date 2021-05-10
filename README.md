@@ -15,6 +15,8 @@ O que mudou?
 - Mudanças na estética pt(2). (atualização de hoje 29/04/2021)
 - Mudanças para deixar o script mais rápido! (atualização de hoje 29/04/2021)
 - Adicionada a opção de baixar um vídeo/foto/foto do perfil do instagram! (atualização de hoje 01/05/2021)
+- Adicionada a opção de baixar videos do facebook! Agora você pode salvar seus vídeos favoritos usando o E-tube. (atualização de hoje 10/05/2021)
+- Reparo de erros e melhorias no desempenho! (atualização de hoje 10/05/2021)
 
 
 # Nova função (Download do Instagram)
