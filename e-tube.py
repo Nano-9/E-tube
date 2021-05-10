@@ -1,9 +1,10 @@
-# Autor: lucas-Dk
-# Meu github: https://github.com/lucas-Dk
-# Meu facebook: https://www.facebook.com/Walker.Lxrd/
-# ////
-# Necessário internet
-# Ele não deixa rodar o código se não tiver internet
+# Autor: lucas-Dk                                                           |
+# Meu github: https://github.com/lucas-Dk                                   |
+# Meu facebook: https://www.facebook.com/Walker.Lxrd/                       |     \
+# ////                                                                              By: lucas -Dk E-tube
+# Necessário internet                                                       |     /
+# Ele não deixa rodar o código se não tiver internet                        |
+# Meu whatsapp, copie esse código e cole no navegador: wa.me/5531986802198  |
 
 try:
 	import sys
@@ -14,6 +15,7 @@ try:
 	import banner
 	import instaloader
 	import pyinsdownloader
+	import downface
 	from historico import *
 	from convertervp3 import *
 	import moviepy.editor as mp
@@ -46,13 +48,12 @@ def on_progress(stream, chunk, bytes_remaining):
         bytes_archive = int(bytes_remaining)
         print("\033[1;34m[+] Baixando:\033[m [{}]% | [{}] \033[1;34mMib/s\033[m \033[1;32mconcluído\033[m".format(liveprogress,bytes_archive))
 
-
 os.system("clear")
 mensagem_boas_vindas = "Seja bem vindo ao E-tube!"
 for letra in mensagem_boas_vindas:
 	print("\033[1;36m{}\033[m".format(letra), end='', flush=True)
 	suspender(0.1)
-suspender(0.8)
+suspender(0.4)
 os.system("clear")
 
 try:
@@ -62,26 +63,28 @@ try:
 except:
 	print("\n\033[1;31m[ERROR]: Você não está conectado a internet :( \033[m\n")
 else:
-	os.system("chmod +x banner.py e-tube.py historico.py links.py convertervp3.py setup.py")
+	os.system("chmod + e-tube.py")
 	os.system("clear")
 	while True:
 		banner.change_banner()
 		print("""
-
-> Coded by: Lucas-Dk
-> Meu GitHub: https://github.com/lucas-Dk
-> Reporte erros: https://www.facebook.com/Walker.Lxrd/
-
+.----------------------------.
+|  Whatsapp: +5531986802198  |
+'----------------------------'
+    ^      (\_/) \033[1;32m[INFO]\033[m Coded by: Lucas-Dk
+    '----- (O.o) \033[1;32m[INFO]\033[m Meu GitHub: https://github.com/lucas-Dk
+           (> <) \033[1;32m[INFO]\033[m Reporte erros: https://www.facebook.com/Walker.Lxrd/
 
 MENU:
 
 \033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
 \033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
-\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Baixar do instagram
-\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Reparar erros do script
-\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Baixar vídeos/fotos do instagram
+\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Baixar vídeos do Facebook
+\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 8 \033[m\033[1;31m]\033[m - Fale comigo
 \033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -230,15 +233,33 @@ MENU:
 						suspender(2)
 						os.system("clear")
 			elif user == 4:
+				print()
+				print("\033[1;32m[+] Opção 4 > Download de vídeos/fotos do instagram!\033[m")
+				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m\n")
+				print()
+				suspender(2)
 				pyinsdownloader.baixar_videos_instagram()
 
 			elif user == 5:
+				print()
+				print("\033[1;32m[+] Opção 5 > Download de um video.mp4 do facebook\033[m")
+				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m")
+				print()
+				print("\033[1;34m[+] Opção de download iniciada!\033[m\n")
+				suspender(2.2)
+				downface.iniciar_download()
 				os.system("clear")
 
 			elif user == 6:
 
+				os.system("clear")
+				
+			elif user == 7:
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
+					print()
+					print("\033[1;32m[+] Opção 7 > Reparo do script automático!\033[m")
+					print()
 					print("\n\033[1;32m[!] Atenção: Caso o erro continue entre em contato comigo:\033[m ")
 					print("> https://www.facebook.com/Walker.Lxrd/\n ")
 					try:
@@ -247,6 +268,7 @@ MENU:
 						print("\n\033[1;31m[!] Saindo...\033[m")
 						suspender(1)
 						sys.exit()
+
 					else:
 						os.system("clear")
 						# comandos para reparar o erro do E-tube
@@ -264,8 +286,9 @@ MENU:
 					print("\033[1;31m[!] Desculpe! O seu sistema pode apresentar falhas com esse patch\033[m")
 					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
-			elif user == 7:
 
+			elif user == 8:
+				print()
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
 ---------------------------------------------------------------
@@ -274,6 +297,7 @@ MENU:
 ---------------------------------------------------------------
 \033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
+
 				try:
 					back_menu = input("Enter para voltar ao menu: ")
 					os.system("clear")
