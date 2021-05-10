@@ -1,5 +1,5 @@
 # Arquivo necessário para rodar o script
 
 pytube >= 10.7.2
-
+tqdm>= 4.60.0
 #Fim
