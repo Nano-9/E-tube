@@ -26,6 +26,16 @@ O que mudou?
 - O tipo de link válido é esse: https://www.facebook.com/p.maia00/videos/3339580006069913
 - Pegue o link do vídeo e coloque no programa
 - Ele informará a qualidade do vídeo para você e fará o download em seguida!
+- Veja como fica:
+- ![Exemplo de como é](https://user-images.githubusercontent.com/69327287/117861711-201c4a80-b268-11eb-99ff-1dfd8d909ef9.png)
+
+## Onde encontro os vídeos do facebook?
+
+- O script logo após o download do vídeo irá armazenar
+- o vídeo dentro da pasta do programa!
+- Veja como fica:
+- ![O local onde o vídeo fica armazenado](https://user-images.githubusercontent.com/69327287/117861909-5bb71480-b268-11eb-82c1-f9bcb6421755.png)
+
 
 # Nova função (Download do Instagram)
 #### Saiba utilizar corretamente:
