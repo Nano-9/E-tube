@@ -1,3 +1,14 @@
+# E-tube v 6.2
+- Script para download de vídeos/fotos/ das plataformas: YouTube/Instagram/Facebook
+
+> AUTOR: LUCAS-DK
+> 
+> Meu WhatsApp: +5531986802198
+
+# Foto do script:
+![Foto do script E-tube by lucas-Dk](https://user-images.githubusercontent.com/69327287/117862566-2c54d780-b269-11eb-9a20-f291de766d04.png)
+
+
 # Atualização chegou:
 > Data da atualização: 22/04/2021
 
@@ -85,11 +96,6 @@ O que mudou?
 # COMO FAZER A CONVERSÃO? [Siga o exemplo abaixo]:
 
 - ![clique aqui para ver o exemplo](https://user-images.githubusercontent.com/69327287/116332575-670a3a80-a7a8-11eb-9cd0-9caa88bf341d.png)
-
-# E-tube
-Script para downloads de video/playlists de video/ música do youtube
-
-- ![Clique aqui para ver o script](https://user-images.githubusercontent.com/69327287/116332915-fc0d3380-a7a8-11eb-883c-f403b46f2bb5.png)
 
 
 # Terá mais atualizações?
