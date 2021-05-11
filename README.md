@@ -19,6 +19,14 @@ O que mudou?
 - Reparo de erros e melhorias no desempenho! (atualização de hoje 10/05/2021)
 
 
+# Nova função (Download do Facebook)
+#### Saiba utilizar corretamente:
+
+- Essa função tem uma expressão regular que identifica o tipo de link válido!
+- O tipo de link válido é esse: https://www.facebook.com/p.maia00/videos/3339580006069913
+- Pegue o link do vídeo e coloque no programa
+- Ele informará a qualidade do vídeo para você e fará o download em seguida!
+
 # Nova função (Download do Instagram)
 #### Saiba utilizar corretamente:
 
