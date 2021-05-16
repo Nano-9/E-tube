@@ -12,7 +12,7 @@
 # Atualização chegou:
 > Data da atualização: 22/04/2021
 
-O que mudou?
+# O que mudou?
 
 - Tratamento de erro e excessão.
 - Mudanças na estética. (atualização de hoje 21/04/2021)
