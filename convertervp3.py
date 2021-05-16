@@ -5,35 +5,45 @@ from time import sleep as suspender
 
 def converter_video_para_mp3(fun="vazio"):
         if fun == "cheio":
-                caminho = input("\033[1;32m[+] Caminho:\033[m ")
-                if r"\playlist" not in caminho:
-                        caminho2 = caminho + r"\playlist\\"
-                        print("\n\033[1;33m[*] CONVERSÃO INICIADA!\n\033[m")
-                        for item in os.listdir(str(caminho2)):
-                                if item.endswith("mp4"):
-                                        seuvideo = item
-                                        download = caminho2 + seuvideo
-                                        fileouts = item.replace(".mp4",".mp3")
-                                        baixando = mp.VideoFileClip(download)
-                                        baixando.audio.write_audiofile(fileouts)
-                        print("\033[1;32m CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
+                try:
+                        caminho = input("\033[1;32m[+] Caminho:\033[m ")
+                except KeyboardInterrupt:
+                        print("\n\033[1;31mSaindo...\033[m")
                         suspender(1)
-                        os.system("clear")
+                        sys.exit()
+                except FileNotFoundError:
+                        print("\033[1;31m[!] Desculpe, não foi possível localizar esse caminho...")
+                        print("Verifique se o caminho está correto!\033[m")
+                        sys.exit()
                 else:
-                        while r"\playlist\\" not in caminho:
-                                print("\033[';31m[ATENÇÃO] Está faltando uma \\ contra barra no final de playlist!\033[m")
-                                caminho = input("\033[1;32m[+] Caminho:\033[m ")
-                        if r"\playlist\\" in caminho:
-                                for item2 in os.listdir(str(caminho)):
-                                        if item2.endswith("mp4"):
-                                                seuvideo2 = item2
-                                                download2 = caminho + seuvideo2
-                                                fileouts2 = item2.replace(".mp4",".mp3")
-                                                baixando2 = mp.VideoFileClip(download2)
-                                                baixando2.audio.write_audiofile(fileouts2)
-                                print("\033[1;32m[+] CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...")
+                        if r"\playlist" not in caminho:
+                                caminho2 = caminho + r"\playlist\\"
+                                print("\n\033[1;33m[*] CONVERSÃO INICIADA!\n\033[m")
+                                for item in os.listdir(str(caminho2)):
+                                        if item.endswith("mp4"):
+                                                seuvideo = item
+                                                download = caminho2 + seuvideo
+                                                fileouts = item.replace(".mp4",".mp3")
+                                                baixando = mp.VideoFileClip(download)
+                                                baixando.audio.write_audiofile(fileouts)
+                                print("\033[1;32m CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
                                 suspender(1)
                                 os.system("clear")
+                        else:
+                                while r"\playlist\\" not in caminho:
+                                        print("\033[1;31m[ATENÇÃO] Está faltando uma \\ contra barra no final de playlist!\033[m")
+                                        caminho = input("\033[1;32m[+] Caminho:\033[m ")
+                                if r"\playlist\\" in caminho:
+                                        for item2 in os.listdir(str(caminho)):
+                                                if item2.endswith("mp4"):
+                                                        seuvideo2 = item2
+                                                        download2 = caminho + seuvideo2
+                                                        fileouts2 = item2.replace(".mp4",".mp3")
+                                                        baixando2 = mp.VideoFileClip(download2)
+                                                        baixando2.audio.write_audiofile(fileouts2)
+                                        print("\033[1;32m[+] CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...")
+                                        suspender(1)
+                                        os.system("clear")
         elif fun == "vazio":
                 os.system("clear")
                 print("\033[1;94m=========================== CONVERTER PARA MP3 ===========================\033[m")
