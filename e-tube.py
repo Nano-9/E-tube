@@ -138,7 +138,7 @@ MENU:
 
 				print()
 				print("\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
-				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'Playlist YT' do script!\n\033[m")
+				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'playlist' do script!\n\033[m")
 				print()
 				try:
 					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
@@ -158,7 +158,7 @@ MENU:
 					print("\033[1;31m[*] Nome:\033[m {}".format(playlist.title))
 					print("\033[1;31m[*] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
 					print("\033[1;31m[*] link quebrado:\033[m o vídeo é pulado!")
-					print("\033[1;31m[*] Local de armazenamento:\033[m pasta Playlist YT")
+					print("\033[1;31m[*] Local de armazenamento:\033[m pasta playlist")
 					print()
 					print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
 					tamanho_da_playlist = 0
