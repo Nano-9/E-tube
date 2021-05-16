@@ -1,4 +1,4 @@
-# E-tube v 6.2
+# E-tube v 6.4
 - Script para download de vídeos/fotos/ das plataformas: YouTube/Instagram/Facebook
 
 > AUTOR: LUCAS-DK
@@ -28,6 +28,7 @@ O que mudou?
 - Adicionada a opção de baixar um vídeo/foto/foto do perfil do instagram! (atualização de hoje 01/05/2021)
 - Adicionada a opção de baixar videos do facebook! Agora você pode salvar seus vídeos favoritos usando o E-tube. (atualização de hoje 10/05/2021)
 - Reparo de erros e melhorias no desempenho! (atualização de hoje 10/05/2021)
+- Opção de download de uma Playlist do Youtube (opção 2) agora tem a função de converter todos os vídeos em MP3. (Atualização de hoje 16/05/2021)
 
 
 # Nova função (Download do Facebook)
