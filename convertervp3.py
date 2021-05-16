@@ -6,6 +6,7 @@ from time import sleep as suspender
 def converter_video_para_mp3(fun="vazio"):
         if fun == "cheio":
                 try:
+                        print("\033[1;36m[+] Exemplo de caminho a ser colocado abaixo:\033[m \\Users\Cliente\Downloads\E-tube")
                         caminho = input("\033[1;32m[+] Caminho:\033[m ")
                 except KeyboardInterrupt:
                         print("\n\033[1;31mSaindo...\033[m")
