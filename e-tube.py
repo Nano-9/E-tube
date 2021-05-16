@@ -168,7 +168,7 @@ MENU:
 						stream = video.streams.get_highest_resolution()
 						print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
 						try:
-							stream.download(output_path="Playlist YT")
+							stream.download(output_path="playlist")
 						except VideoUnavailable:
 							print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
 							print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
@@ -177,10 +177,19 @@ MENU:
 							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
 						else:
 							pass
-					print("\n\033[1;32m[!] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
-					print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
-					suspender(2)
-					os.system("clear")
+					convertermp3 = str(input("Deseja converter todos os vídeos da playlist para o formato MP3? [S/N]: ")).upper()
+					while convertermp3 not in "S" and convertermp3 not in "N":
+						convertermp3 = str(input("Deseja converter todos os vídeos da playlist para o formato MP3? [S/N]: ")).upper()
+					if convertermp3 == "S":
+						converter_video_para_mp3(fun="cheio")
+					elif convertermp3 == "N":
+						print("\n\033[1;32m[!] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
+						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
+						suspender(2)
+						os.system("clear")
+					else:
+						print("Opção vazia não é permitida!")
+						sys.exit()
 
 			elif user == 3:
 
