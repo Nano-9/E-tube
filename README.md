@@ -29,7 +29,7 @@
 - Adicionada a opção de baixar videos do facebook! Agora você pode salvar seus vídeos favoritos usando o E-tube. (atualização de hoje 10/05/2021)
 - Reparo de erros e melhorias no desempenho! (atualização de hoje 10/05/2021)
 - Opção de download de uma Playlist do Youtube (opção 2) agora tem a função de converter todos os vídeos em MP3. (Atualização de hoje 16/05/2021)
-- Opção de conversão de qualquer playlist já existente no computador! Pode ser apenas um vídeo ou uma playist. (Atualização de hoje 17/05/2021)
+- Opção de conversão de qualquer playlist já existente no computador! Pode ser apenas um vídeo ou uma playlist. (Atualização de hoje 17/05/2021)
 
 
 # Nova função (Download do Facebook)
