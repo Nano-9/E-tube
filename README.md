@@ -6,7 +6,8 @@
 > Meu WhatsApp: +5531986802198
 
 # Foto do script:
-![Foto do script E-tube by lucas-Dk](https://user-images.githubusercontent.com/69327287/117862566-2c54d780-b269-11eb-9a20-f291de766d04.png)
+![Foto do script by: lucas-Dk](https://user-images.githubusercontent.com/69327287/118568716-cc6d9d80-b74e-11eb-9043-1c60a015339c.png)
+
 
 
 # Atualização chegou:
