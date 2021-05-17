@@ -13,12 +13,15 @@ try:
 	import urllib.request
 	import os
 	import banner
+	import re
 	import instaloader
 	import pyinsdownloader
 	import downface
 	from historico import *
 	from convertervp3 import *
+	from time import strftime
 	import moviepy.editor as mp
+	import datetime
 except Exception as E:
 	
 	print(E)
@@ -37,6 +40,10 @@ if existe(arquivo) == True:
 	pass
 
 previousprogress = 0
+def validar_caminho(caminho):
+	valid = re.search(r"^(?=\\([a-zA-Z0-9_\-\\\s]*)(\\)$)",caminho)
+	return valid
+
 def on_progress(stream, chunk, bytes_remaining):
     global previousprogress
     total_size = stream.filesize
@@ -82,9 +89,10 @@ MENU:
 \033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
 \033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Baixar vídeos/fotos do instagram
 \033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Baixar vídeos do Facebook
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Reparar erros do script
-\033[1;31m[\033[1;32m 8 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Converter vídeos para MP3
+\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 8 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 9 \033[m\033[1;31m]\033[m - Fale comigo
 \033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -260,10 +268,51 @@ MENU:
 				os.system("clear")
 
 			elif user == 6:
+				print()
+				print("\033[1;32m[+] Opção de conversão de vídeos para MP3!\n\033[m")
+				print("\033[1;33m[!] Essa opção armazena os vídeos na pasta do script!\033[m")
+				print("\033[1;33m[+] Exemplo de caminho a ser colocado abaixo:\033[m " + r"\Users\Cliente\Downloads\Musicas\n")
+
+				try:
+					print()
+					caminho1 = input("\033[1;32m[*] Informe o caminho onde os vídeos estão:\033[m ").strip()
+					while not validar_caminho(caminho1):
+						print("\033[1;31m[!] Está faltando uma contra barra -> \\ adicione ela ao final do caminho!\033[m")
+						caminho1 = input("\033[1;32m[*] Informe o caminho onde os vídeos estão:\033[m ").strip()
+				except FileNotFoundError:
+					print("\033[1;31m[ERROR] Não foi possível localizar esse caminho:\033[m {}\n".format(caminho1))
+				else:
+					correto1 = input("\033[1;36m[!] Esse caminho está correto? [S/N]:\033[m ").strip().upper()
+					while correto1 not in "S" and correto1 not in "N":
+						correto1 = input("\033[1;36m[!] Esse caminho está correto? [S/N]:\033[m ").strip().upper()
+					if correto1 == "S":
+						tipo = input("\033[1;33m[+] Qual a extensão dos vídeos [.mp4/.webm/.mov ...]:\033[m ").strip().lower()
+						while "." not in tipo:
+							print("\033[1;31m[!] Coloque um . antes da extensão!\033[m")
+							tipo = input("\033[1;33m[+] Qual a extensão dos vídes [.mp4/.webm/.mov ...]:\033[m ").strip().lower()
+						hora_start = strftime("%H:%M:%S")
+						start = datetime.datetime.now()
+						print("\n\033[1;32m[*] Conversão iniciada as:\033[m [{}]\n".format(hora_start))
+						for item in os.listdir(str(caminho1)):
+							if item.endswith(str(tipo)):
+									seuvideo1 = item
+									seuvideo2 = caminho1 + seuvideo1
+									seuvideo3 = item.replace(tipo,".mp3")
+									convert = mp.VideoFileClip(seuvideo2)
+									convert.audio.write_audiofile(seuvideo3)
+						finish = datetime.datetime.now() - start
+						tempo = str(finish)
+						print("\n\033[1;36m[+] Abaixo está o tempo que o programa levou para converter:\033[m")
+						print("\033[1;32m[*] Conversão finalizada com:\033[m [{}]".format(tempo[0:7]))
+						print("\n\033[1;36m[+] Voltando ao menu...\033[m")
+						suspender(1.3)
+						os.system("clear")
+					
+			elif user == 7:
 
 				os.system("clear")
-				
-			elif user == 7:
+
+			elif user == 8:
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
 					print()
@@ -296,7 +345,8 @@ MENU:
 					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 
-			elif user == 8:
+			elif user == 9:
+
 				print()
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
