@@ -21,6 +21,7 @@ try:
 	from convertervp3 import *
 	from time import strftime
 	import moviepy.editor as mp
+	from moviepy.video.fx.all import crop
 	import datetime
 except Exception as E:
 	
@@ -84,16 +85,17 @@ else:
 
 MENU:
 
-\033[1;31m[\033[1;32m 1 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
-\033[1;31m[\033[1;32m 2 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
-\033[1;31m[\033[1;32m 3 \033[m\033[1;31m]\033[m - Baixar uma música MP3
-\033[1;31m[\033[1;32m 4 \033[m\033[1;31m]\033[m - Baixar vídeos/fotos do instagram
-\033[1;31m[\033[1;32m 5 \033[m\033[1;31m]\033[m - Baixar vídeos do Facebook
-\033[1;31m[\033[1;32m 6 \033[m\033[1;31m]\033[m - Converter vídeos para MP3
-\033[1;31m[\033[1;32m 7 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 8 \033[m\033[1;31m]\033[m - Reparar erros do script
-\033[1;31m[\033[1;32m 9 \033[m\033[1;31m]\033[m - Fale comigo
-\033[1;31m[\033[1;32m x \033[m\033[1;31m]\033[m - Sair
+\033[1;31m[\033[1;32m 01 \033[m\033[1;31m]\033[m - Baixar um vídeo MP4
+\033[1;31m[\033[1;32m 02 \033[m\033[1;31m]\033[m - Baixar uma playlist MP4
+\033[1;31m[\033[1;32m 03 \033[m\033[1;31m]\033[m - Baixar uma música MP3
+\033[1;31m[\033[1;32m 04 \033[m\033[1;31m]\033[m - Baixar vídeos/fotos do instagram
+\033[1;31m[\033[1;32m 05 \033[m\033[1;31m]\033[m - Baixar vídeos do Facebook
+\033[1;31m[\033[1;32m 06 \033[m\033[1;31m]\033[m - Converter vídeos para MP3
+\033[1;31m[\033[1;32m 07 \033[m\033[1;31m]\033[m - Criar um GIF
+\033[1;31m[\033[1;32m 08 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 09 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 10 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m xx \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
 			user = input("\n\033[1;33mO que você deseja:\033[m ")
@@ -101,10 +103,9 @@ MENU:
 			print("\nSaindo...")
 			suspender(1)
 			sys.exit() # Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
-		if user.isnumeric():
-			user = int(user)
+		else:
 			
-			if user == 1:
+			if user == "01" or user == "1":
 
 				print()
 				print("\033[1;32m[+] Opção 1 > Download de um video.mp4\033[m")
@@ -142,7 +143,7 @@ MENU:
 				suspender(2)
 				os.system("clear")
 
-			elif user == 2:
+			elif user == "02" or user == "2":
 
 				print()
 				print("\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
@@ -199,7 +200,7 @@ MENU:
 						print("\033[1;31m[!] Opção vazia não é permitida!\033[m")
 						suspender(2)
 						os.system("clear")
-			elif user == 3:
+			elif user == "03" or user == "3":
 
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
 				print("\033[1;32m[+] Os vídeos que serão convertidos para um MP3 ficarão dentro da pasta > VideosConvertidos\033[m")
@@ -245,11 +246,10 @@ MENU:
 							if converte == "Y":
 								converter_video_para_mp3()
 							elif converte == "N":
-								pass
-						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
-						suspender(2)
-						os.system("clear")
-			elif user == 4:
+								print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
+								suspender(2)
+								os.system("clear")
+			elif user == "04" or user == "4":
 				print()
 				print("\033[1;32m[+] Opção 4 > Download de vídeos/fotos do instagram!\033[m")
 				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m\n")
@@ -257,7 +257,7 @@ MENU:
 				suspender(2)
 				pyinsdownloader.baixar_videos_instagram()
 
-			elif user == 5:
+			elif user == "05" or user == "5":
 				print()
 				print("\033[1;32m[+] Opção 5 > Download de um video.mp4 do facebook\033[m")
 				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m")
@@ -267,7 +267,7 @@ MENU:
 				downface.iniciar_download()
 				os.system("clear")
 
-			elif user == 6:
+			elif user == "06" or user == "6":
 				print()
 				print("\033[1;32m[+] Opção de conversão de vídeos para MP3!\n\033[m")
 				print("\033[1;33m[!] Essa opção armazena os vídeos na pasta do script!\033[m")
@@ -308,11 +308,47 @@ MENU:
 						suspender(1.3)
 						os.system("clear")
 					
-			elif user == 7:
+			elif user == "07" or user == "7":
+				print("\n\033[1;32m[+] Opção de criação de GIF!")
+				print("[+] O GIF é armazenado na pasta do E-tube.\033[m")
+				print()
+				caminho = str(input("\033[1;32m[+] Informe o caminho onde está(ão) o(s) vídeo(s):\033[m ")).strip()
+				while not validar_caminho(caminho=caminho):
+					print("\033[1;32m[!] Está faltando uma contra barra -> \\ adicione ao final do caminho!\033[m")
+					caminho = str(input("\033[1;32m[+] Informe o caminho onde está(ão) o(s) vídeo(s):\033[m ")).strip()
+				extensao = str(input("\033[1;32m[+] Extensão do(s) vídeo(s) [.mp4/.webm/.wmv ...]:\033[m ")).strip().lower()
+				while "." not in extensao:
+					print("\033[1;31m[!] Coloque um . no começo da extensão do arquivo!\033[m")
+					extensao = str(input("\033[1;32m[+] Extensão do(s) vídeo(s) [.mp4/.webm/.wmv ...]:\033[m ")).strip().lower()
+				partir_de = int(input("\033[1;32m[+] Informe o minuto/segundo para começar:\033[m "))
+				parar_no = int(input("\033[1;32m[+] Informe o minuto/segundo para parar:\033[m "))
+				larguragif = int(input("\033[1;32m[+] Informe a largura que deseja o GIF:\033[m "))
+				alturagif = int(input("\033[1;32m[+] Informe a altura que deseja o GIF:\033[m "))
+				print()
+				hora = strftime("%H:%M:%S")
+				print("\033[1;32m[*] Criação do GIF iniciada as:\033[m {}\n".format(hora))
+				start = datetime.datetime.now()
+				for item in os.listdir(str(caminho)):
+					if item.endswith(str(extensao)):
+						receberarquivo = item
+						concatenararqv = caminho + receberarquivo
+						saidaemgifarqv = receberarquivo.replace(extensao,".gif")
+						dadosdoarquivo = mp.VideoFileClip(concatenararqv)
+						fpsdoarquivogf = dadosdoarquivo.reader.fps
+						gerandoogifarq = dadosdoarquivo.subclip(partir_de,parar_no)
+						gerandoogifarq = gerandoogifarq.resize(width=larguragif,height=alturagif)
+						gerandoogifarq.write_gif(saidaemgifarqv)
+				finish = datetime.datetime.now() - start
+				endfun = str(finish)
+				print("\033[1;32m[*] Criação de GIF concluída!\033[m")
+				print("\033[1;36m[+] Tempo que levou para criar o seu GIF:\033[m {}".format(endfun[0:7]))
+				suspender(2)
+				os.system("clear")
+			elif user == "08" or user == "8":
 
 				os.system("clear")
 
-			elif user == 8:
+			elif user == "09" or user == "9":
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
 					print()
@@ -345,8 +381,7 @@ MENU:
 					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 
-			elif user == 9:
-
+			elif user == "10":
 				print()
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
@@ -367,19 +402,14 @@ MENU:
 					sys.exit()
 				else:
 					pass
+
+			elif user == 'X' or user == 'x' or user == "XX" or user == "xx":
+				print("Saindo...")
+				suspender(1)
+				sys.exit()
+
 			else:
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
 				os.system("clear")
-
-		elif user == 'X' or user == 'x':
-			print("Saindo...")
-			suspender(1)
-			sys.exit()
-
-		else:
-			print("\033[1;31mOpção inválida! Tente novamente.\033[m")
-			suspender(0.8)
-			os.system("clear")
-
 # Fim do script
