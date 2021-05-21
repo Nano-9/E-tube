@@ -1,4 +1,4 @@
-# E-tube v 6.6
+# E-tube v 7.0
 - Script para download de vídeos/fotos/ das plataformas: YouTube/Instagram/Facebook
 
 > AUTOR: LUCAS-DK
@@ -6,7 +6,8 @@
 > Meu WhatsApp: +5531986802198
 
 # Foto do script:
-![Foto do script by: lucas-Dk](https://user-images.githubusercontent.com/69327287/118568716-cc6d9d80-b74e-11eb-9043-1c60a015339c.png)
+![Foto do E-tube by: lucas-Dk](https://user-images.githubusercontent.com/69327287/119172044-ca9c2680-ba3b-11eb-8cea-fa7aff0a4f00.png)
+
 
 
 
@@ -31,6 +32,8 @@
 - Reparo de erros e melhorias no desempenho! (atualização de hoje 10/05/2021)
 - Opção de download de uma Playlist do Youtube (opção 2) agora tem a função de converter todos os vídeos em MP3. (Atualização de hoje 16/05/2021)
 - Opção de conversão de qualquer playlist já existente no computador! Pode ser apenas um vídeo ou uma playlist. (Atualização de hoje 17/05/2021)
+- Opção de criação de GIF dos seus vídeos favoritos! (Atualização de hoje 19/05/2021)
+- Opção de download de 80 fotos do google! Baixe suas fotos favoritas de forma rápida. (Atualização de hoje 21/05/2021)
 
 
 # Nova função (Download do Facebook)
