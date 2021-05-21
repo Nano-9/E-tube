@@ -354,7 +354,6 @@ MENU:
 				suspender(2)
 				os.system("clear")
 			elif user == "08" or user == "8":
-				#Script de baixar imagens
 
 				evento = requests.Session()
 
@@ -424,7 +423,7 @@ MENU:
 
 
 			elif user == "11":
-				
+
 				print()
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
@@ -453,6 +452,7 @@ MENU:
 				sys.exit()
 
 			else:
+				
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
 				os.system("clear")
