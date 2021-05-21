@@ -353,11 +353,18 @@ MENU:
 				print("\033[1;36m[+] Tempo que levou para criar o seu GIF:\033[m {}".format(endfun[0:7]))
 				suspender(2)
 				os.system("clear")
+
 			elif user == "08" or user == "8":
+				horario = strftime("%H:%M:%S")
+				starting = datetime.datetime.now()
+				print("\n\033[1;32m[+] Opção de baixar imagens do Google!")
+				print("[+] O download da imagem fica salvo na pasta:\033[m ImagensGoogle\n")
 
 				evento = requests.Session()
 
-				evento_pesquisar = str(input("O que deseja pesquisar: ")).capitalize()
+				evento_pesquisar = str(input("\033[1;36m[+] O que deseja pesquisar:\033[m ")).capitalize()
+				print()
+				print("\033[1;32m[*] Download iniciado!\n\033[m")
 				evento_google = buscar_google + "q=" + evento_pesquisar
 				evento_informacoes = evento.get(evento_google, headers=header)
 
@@ -373,20 +380,22 @@ MENU:
 							if armazenamento != None:
 								imagem_nomes.append(armazenamento)
 						for indice, buscas in enumerate(imagem_nomes):
-							print("[+] Download da {}ª imagem: {}.jpg".format(indice+1,evento_pesquisar))
+							print("\033[1;34m[{}]\033[m \033[1;32m[info]\033[m Download da {}ª imagem: {}.jpg".format(horario,indice+1,evento_pesquisar))
 							evento_download_bytes = evento.get(buscas)
 							evento_salvar_fotos = os.path.join("ImagensGoogle" + "/" + evento_pesquisar + str(indice+1) + ".jpg")
 							with open(evento_salvar_fotos,"wb") as file:
 								file.write(evento_download_bytes.content)
 								file.close()
-						print("[+] Download completo!")
-						suspender(2)
+						finish = datetime.datetime.now() - starting
+						finishing = str(finish)
+						print("\n\033[1;32m[*] Download completo!")
+						print("[+] Tempo que o programa fez o download:\033[m {}\n".format(finishing[0:7]))
+						print("\033[1;34m[+] Voltando ao menu...\033[m")
+						suspender(2.2)
 						os.system("clear")
 
-			
 			elif user == "09" or user == "9":
 				os.system("clear")
-
 
 			elif user == "10":
 				sistema = sys.platform
@@ -452,7 +461,6 @@ MENU:
 				sys.exit()
 
 			else:
-				
 				print("\033[1;31mOpção inválida! Tente novamente.\033[m")
 				suspender(0.8)
 				os.system("clear")
