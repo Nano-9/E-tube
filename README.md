@@ -1,5 +1,6 @@
 # E-tube v 7.0
-- Script para download de vídeos/fotos/ das plataformas: YouTube/Instagram/Facebook
+- E-tube é um script feito para baixar vídeos/fotos das plataformas YouTube/Instagram e Facebook! 
+- Ele também converte playlists de vídeos inteiras de diferentes formatos em MP3
 
 > AUTOR: LUCAS-DK
 > 
