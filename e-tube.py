@@ -17,6 +17,8 @@ try:
 	import instaloader
 	import pyinsdownloader
 	import downface
+	import requests
+	from bs4 import BeautifulSoup
 	from historico import *
 	from convertervp3 import *
 	from time import strftime
@@ -39,6 +41,12 @@ if not existe(arquivo):
 	criar(arquivo)
 if existe(arquivo) == True:
 	pass
+
+#eventos
+os.makedirs("ImagensGoogle",exist_ok=True)
+header = {"User-Agent": "Mozilla/5.0 (Linux; Android 7.1.1; SM-J250M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36"}
+buscar_google = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&"
+
 
 previousprogress = 0
 def validar_caminho(caminho):
@@ -92,9 +100,10 @@ MENU:
 \033[1;31m[\033[1;32m 05 \033[m\033[1;31m]\033[m - Baixar vídeos do Facebook
 \033[1;31m[\033[1;32m 06 \033[m\033[1;31m]\033[m - Converter vídeos para MP3
 \033[1;31m[\033[1;32m 07 \033[m\033[1;31m]\033[m - Criar um GIF
-\033[1;31m[\033[1;32m 08 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 09 \033[m\033[1;31m]\033[m - Reparar erros do script
-\033[1;31m[\033[1;32m 10 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m 08 \033[m\033[1;31m]\033[m - Baixar imagens do Google
+\033[1;31m[\033[1;32m 09 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 10 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 11 \033[m\033[1;31m]\033[m - Fale comigo
 \033[1;31m[\033[1;32m xx \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -345,10 +354,42 @@ MENU:
 				suspender(2)
 				os.system("clear")
 			elif user == "08" or user == "8":
+				#Script de baixar imagens
 
+				evento = requests.Session()
+
+				evento_pesquisar = str(input("O que deseja pesquisar: ")).capitalize()
+				evento_google = buscar_google + "q=" + evento_pesquisar
+				evento_informacoes = evento.get(evento_google, headers=header)
+
+				if evento_informacoes.status_code == 200:
+
+					evento_html = evento_informacoes.text
+					html_soup = BeautifulSoup(evento_html,"html.parser")
+					evento_de_busca = html_soup.find_all("img",{"class":"rg_i Q4LuWd"})
+					if evento_de_busca:
+						imagem_nomes = []
+						for links in evento_de_busca:
+							armazenamento = links.get("data-src")
+							if armazenamento != None:
+								imagem_nomes.append(armazenamento)
+						for indice, buscas in enumerate(imagem_nomes):
+							print("[+] Download da {}ª imagem: {}.jpg".format(indice+1,evento_pesquisar))
+							evento_download_bytes = evento.get(buscas)
+							evento_salvar_fotos = os.path.join("ImagensGoogle" + "/" + evento_pesquisar + str(indice+1) + ".jpg")
+							with open(evento_salvar_fotos,"wb") as file:
+								file.write(evento_download_bytes.content)
+								file.close()
+						print("[+] Download completo!")
+						suspender(2)
+						os.system("clear")
+
+			
+			elif user == "09" or user == "9":
 				os.system("clear")
 
-			elif user == "09" or user == "9":
+
+			elif user == "10":
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
 					print()
@@ -381,7 +422,9 @@ MENU:
 					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 
-			elif user == "10":
+
+			elif user == "11":
+				
 				print()
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
@@ -402,6 +445,7 @@ MENU:
 					sys.exit()
 				else:
 					pass
+
 
 			elif user == 'X' or user == 'x' or user == "XX" or user == "xx":
 				print("Saindo...")
