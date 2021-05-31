@@ -6,7 +6,7 @@ from time import sleep as suspender
 def converter_video_para_mp3(fun="vazio"):
         if fun == "cheio":
                 try:
-                        print("\033[1;36m[+] Exemplo de caminho a ser colocado abaixo:\033[m \\Users\Cliente\Downloads\E-tube")
+                        print("\033[1;36m[+] Exemplo de caminho a ser colocado abaixo:\033[m \\Users\\Cliente\\Downloads\\E-tube")
                         caminho = input("\033[1;32m[+] Caminho:\033[m ")
                 except KeyboardInterrupt:
                         print("\n\033[1;31mSaindo...\033[m")
@@ -31,11 +31,11 @@ def converter_video_para_mp3(fun="vazio"):
                                 suspender(1)
                                 os.system("clear")
                         else:
-                                while r"\playlist\\" not in caminho:
+                                while "\playlist\\" not in caminho:
                                         print("\033[1;31m[ATENÇÃO] Está faltando uma \\ contra barra no final de playlist!\033[m")
                                         caminho = input("\033[1;32m[+] Caminho:\033[m ")
                                         
-                                if r"\playlist\\" in caminho:
+                                if "\playlist\\" in caminho:
                                         for item2 in os.listdir(str(caminho)):
                                                 if item2.endswith("mp4"):
                                                         seuvideo2 = item2
