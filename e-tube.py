@@ -50,8 +50,13 @@ buscar_google = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873
 
 previousprogress = 0
 def validar_caminho(caminho):
-	valid = re.search(r"^(?=\\([a-zA-Z0-9_\-\\\s]*)(\\)$)",caminho)
-	return valid
+	if "\\" in caminho:
+		valid = re.search(r"^(?=\\([a-zA-Z0-9_\-\\\s]*)(\\)$)",caminho)
+		return valid
+	elif "/" in caminho:
+		valid = re.search(r"^(?=\/([a-zA-Z0-9\/_\-\s]*)(\/)$)",caminho)
+		return valid
+
 
 def on_progress(stream, chunk, bytes_remaining):
     global previousprogress
@@ -286,8 +291,12 @@ MENU:
 					print()
 					caminho1 = input("\033[1;32m[*] Informe o caminho onde os vídeos estão:\033[m ").strip()
 					while not validar_caminho(caminho1):
-						print("\033[1;31m[!] Está faltando uma contra barra -> \\ adicione ela ao final do caminho!\033[m")
-						caminho1 = input("\033[1;32m[*] Informe o caminho onde os vídeos estão:\033[m ").strip()
+						if sys.platform == "win32":
+							print("\033[1;31m[!] Está faltando uma contra barra -> \\ adicione ela ao final do caminho!\033[m")
+							caminho1 = input("\033[1;32m[*] Informe o caminho onde os vídeos estão:\033[m ").strip()
+						elif sys.platform == "linux":
+							print("\033[1;31m[!] Está faltando uma barra -> / adicione ela ao final do caminho!\033[m")
+							caminho1 = input("\033[1;32m[*] Informe o caminho onde os vídeos estão:\033[m ").strip()
 				except FileNotFoundError:
 					print("\033[1;31m[ERROR] Não foi possível localizar esse caminho:\033[m {}\n".format(caminho1))
 				else:
