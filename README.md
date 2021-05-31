@@ -36,6 +36,7 @@
 - Opção de conversão de qualquer playlist já existente no computador! Pode ser apenas um vídeo ou uma playlist. (Atualização de hoje 17/05/2021)
 - Opção de criação de GIF dos seus vídeos favoritos! (Atualização de hoje 19/05/2021)
 - Opção de download de 80 fotos do google! Baixe suas fotos favoritas de forma rápida. (Atualização de hoje 21/05/2021)
+- Correção de bugs na hora da conversão! (Atualização de hoje 31/05/2021)
 
 
 # Nova função (Download do Facebook)
