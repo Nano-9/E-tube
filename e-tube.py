@@ -140,7 +140,7 @@ MENU:
 				try:
 					video = yt.streams.get_highest_resolution()
 					yt.register_on_progress_callback(on_progress)
-					video.download(output_path="Vídeos-baixados")
+					video.download(output_path="Videos-baixados")
 				except VideoUnavailable:
 					print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
 				except KeyboardInterrupt:
