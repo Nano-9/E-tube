@@ -28,7 +28,7 @@ def converter_video_para_mp3(fun="vazio"):
                                                         fileouts = item.replace(".mp4",".mp3")
                                                         baixando = mp.VideoFileClip(download)
                                                         baixando.audio.write_audiofile(fileouts)
-                                        print("\033[1;32m CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
+                                        print("\033[1;32m[*] CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
                                         suspender(1)
                                         os.system("clear")
                                 else:
@@ -44,7 +44,7 @@ def converter_video_para_mp3(fun="vazio"):
                                                                 fileouts2 = item2.replace(".mp4",".mp3")
                                                                 baixando2 = mp.VideoFileClip(download2)
                                                                 baixando2.audio.write_audiofile(fileouts2)
-                                                print("\033[1;32m CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...")
+                                                print("\033[1;32m[*] CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...")
                                                 suspender(1)
                                                 os.system("clear")
                         elif sys.platform == "linux":
@@ -58,7 +58,7 @@ def converter_video_para_mp3(fun="vazio"):
                                                         saida_musica = seuvideo.replace(".mp4",".mp3")
                                                         baixando_ = mp.VideoFileClip(download)
                                                         baixando.audio.write_audiofile(saida_musica)
-                                        print("\033[1;32m CONVERSÃO INICIADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
+                                        print("\033[1;32m[*] CONVERSÃO INICIADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
                                         suspender(1)
                                         os.system("clear")
                                 else:
@@ -72,7 +72,7 @@ def converter_video_para_mp3(fun="vazio"):
                                                         saida_musica_ = seuvideo.replace(".mp4",".mp3")
                                                         baixando_musica = mp.VideoFileClip(downloads_)
                                                         baixando_musica.audio.write_audiofile(saida_musica_)
-                                                print("\033[1;32m CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
+                                                print("\033[1;32m[*] CONVERSÃO FINALIZADA COM SUCESSO! VOLTANDO AO MENU...\033[m")
                                                 suspender(1)
                                                 os.system("clear")
 
