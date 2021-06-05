@@ -1,4 +1,4 @@
-# E-tube v 7.0
+# E-tube v 7.2
 - E-tube é um script feito para baixar vídeos/fotos das plataformas YouTube/Instagram e Facebook! 
 - Ele também converte playlists de vídeos inteiras de diferentes formatos em MP3
 - Cria GIF's dos seus vídeos favoritos! (Saiba tudo sobre lendo abaixo):
@@ -8,7 +8,7 @@
 > Meu WhatsApp: +5531986802198
 
 # Foto do script:
-![Foto do E-tube by: lucas-Dk](https://user-images.githubusercontent.com/69327287/119172044-ca9c2680-ba3b-11eb-8cea-fa7aff0a4f00.png)
+![Script E-tube by lucas-Dk](https://user-images.githubusercontent.com/69327287/120875349-d29eaf00-c581-11eb-8212-1993d85bd4fa.png)
 
 
 
@@ -37,6 +37,7 @@
 - Opção de criação de GIF dos seus vídeos favoritos! (Atualização de hoje 19/05/2021)
 - Opção de download de 80 fotos do google! Baixe suas fotos favoritas de forma rápida. (Atualização de hoje 21/05/2021)
 - Correção de bugs na hora da conversão! (Atualização de hoje 31/05/2021)
+- Nessa versão 7.2 o E-tube está muito mais organizado! A saída dos arquivos ficam dentro da sua respectiva pasta! (Atualização de hoje 04/06/2021)
 
 
 # Nova função (Download do Facebook)
