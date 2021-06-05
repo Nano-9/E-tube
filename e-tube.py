@@ -317,7 +317,12 @@ MENU:
 									seuvideo2 = caminho1 + seuvideo1
 									seuvideo3 = item.replace(tipo,".mp3")
 									convert = mp.VideoFileClip(seuvideo2)
-									convert.audio.write_audiofile(seuvideo3)
+									if convert:
+										try:
+											os.chdir("SUAS_MÚSICAS")
+											os.path.join("SUAS_MÚSICAS" + "/" + str(convert.audio.write_audiofile(seuvideo3)))
+										except:
+											os.path.join("SUAS_MÚSICAS" + "/" + str(convert.audio.write_audiofile(seuvideo3)))
 						finish = datetime.datetime.now() - start
 						tempo = str(finish)
 						print("\n\033[1;36m[+] Abaixo está o tempo que o programa levou para converter:\033[m")
