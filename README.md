@@ -53,9 +53,10 @@
 ## Onde encontro os vídeos do facebook?
 
 - O script logo após o download do vídeo irá armazenar
-- o vídeo dentro da pasta do programa!
+- o vídeo dentro da pasta com o nome VideosFacebook!
 - Veja como fica:
-- ![O local onde o vídeo fica armazenado](https://user-images.githubusercontent.com/69327287/117861909-5bb71480-b268-11eb-82c1-f9bcb6421755.png)
+- ![e-tube armazenamento](https://user-images.githubusercontent.com/69327287/120943294-6dbf9200-c704-11eb-8bbe-1434d5bc3cf3.png)
+
 
 
 # Nova função (Download do Instagram)
