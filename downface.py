@@ -12,15 +12,14 @@ except:
     hora = strftime("%H:%M:%S")
     print("\033[1;36m[{}]\033[m \033[1;33m[!]\033[m Digite esse comando: pip install -r requirements.txt\n".format(hora))
 else:
-
     hora = strftime("%H:%M:%S")
-
     def validar_link(link):
         valid = re.search(r"^(?=(https://www.facebook.com\/)(.*)(\/videos)((\/)[0-9]{16})$)",link)
         return valid
 # essa função é que baixa o video:
     def iniciar_download():
         def baixar_video(qualidade):
+            os.makedirs("VideosFacebook",exist_ok=True)
             el(1)
             print("\n\033[1;36m[{}]\033[m \033[1;32m[INFO]\033[m Baixando o seu video com a qualidade: \033[1;33m{}\033[m\n".format(hora,qualidade))
             url_do_video = re.search(rf'{qualidade.lower()}_src:"(.+?)"', html).group(1)
@@ -29,11 +28,12 @@ else:
             tamanho_bloqueado = 1024
             nome_arquivo = "VideoFacebook"
             tqdm_dados = tqdm(total=tamanho_arquivo,unit="Kb",desc="\033[1;34mBaixando\033[m")
-            with open(nome_arquivo + ".mp4","wb") as baixar:
+            os.chdir("VideosFacebook")
+            with open("VideosFacebook" +".mp4","wb") as arq:
                 for dados in tamanho_arquivo_requisitar.iter_content(tamanho_bloqueado):
                     tqdm_dados.update(len(dados))
-                    baixar.write(dados)
-            tqdm_dados.close()
+                    arq.write(dados)
+                tqdm_dados.close()
             print("\n\033[1;36m[{}]\033[m \033[1;32m[INFO]\033[m O seu video foi baixado com sucesso!\n".format(hora))
 
         while True:
