@@ -43,6 +43,7 @@ if existe(arquivo) == True:
 	pass
 
 #eventos
+os.makedirs("Seus_GIFs",exist_ok=True)
 os.makedirs("ImagensGoogle",exist_ok=True)
 header = {"User-Agent": "Mozilla/5.0 (Linux; Android 7.1.1; SM-J250M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36"}
 buscar_google = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&"
@@ -358,9 +359,13 @@ MENU:
 						saidaemgifarqv = receberarquivo.replace(extensao,".gif")
 						dadosdoarquivo = mp.VideoFileClip(concatenararqv)
 						fpsdoarquivogf = dadosdoarquivo.reader.fps
-						gerandoogifarq = dadosdoarquivo.subclip(partir_de,parar_no)
-						gerandoogifarq = gerandoogifarq.resize(width=larguragif,height=alturagif)
-						gerandoogifarq.write_gif(saidaemgifarqv)
+						try:
+							os.chdir("Seus_GIFs")
+							gerandoogifarq = dadosdoarquivo.subclip(partir_de,parar_no)
+							gerandoogifarq = gerandoogifarq.resize(width=larguragif,height=alturagif)
+							os.path.join("Seus_GIFs" + "/" + str(gerandoogifarq.write_gif(saidaemgifarqv)))
+						except:
+							os.path.join("Seus_GIFs" + "/" + str(gerandoogifarq.write_gif(saidaemgifarqv)))
 				finish = datetime.datetime.now() - start
 				endfun = str(finish)
 				print("\033[1;32m[*] Criação de GIF concluída!\033[m")
