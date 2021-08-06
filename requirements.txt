@@ -4,4 +4,7 @@ pytube >= 10.7.2
 tqdm >= 4.60.0
 bs4 >= 0.0.1
 requests >= 2.25.1
+pafy >= 0.5.5
+pathlib >= 1.0.1
+
 #Fim
