@@ -12,6 +12,7 @@ try:
 	from time import sleep as suspender
 	import urllib.request
 	import os
+	import pafy
 	import banner
 	import re
 	import instaloader
@@ -24,6 +25,7 @@ try:
 	from time import strftime
 	import moviepy.editor as mp
 	from moviepy.video.fx.all import crop
+	from pathlib import Path
 	import datetime
 except Exception as E:
 	
@@ -126,37 +128,83 @@ MENU:
 				print("\033[1;32m[+] Opção 1 > Download de um video.mp4\033[m")
 				print("\033[1;32m[+] O vídeo ficará salvo na pasta do script!\033[m")
 				print()
+
+				print("""
+########## Formas de download: ##########
+\033[1;33m
+[1] Pafy
+[2] Pytube\033[m\n""")
 				try:
-					link = str(input("\033[1;33mUrl do vídeo:\033[m "))
-					adicionar_links(arq=arquivo,dados=link,arg="[LINKS DE VIDEOS]")
+					tecle = str(input("\033[1;32m[+] Com qual forma de download você deseja continuar: \033[m"))
+					print()
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
-					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
-				url_video = link
-				yt = YouTube(url_video)
-
-				print("\n\033[1;31m[!] Buscando streams diponíveis para download...\033[m\n")
-
-				for streams in yt.streams.filter(file_extension="mp4"):
-					print("\033[1;31m[Vídeo]\033[m \033[1;33m{}\033[m".format(streams))
-					suspender(0.5)
-
-				print("\n\033[1;32m[+] Iniciando o download...\033[m")
-				try:
-					video = yt.streams.get_highest_resolution()
-					yt.register_on_progress_callback(on_progress)
-					video.download(output_path="Videos-baixados")
-				except VideoUnavailable:
-					print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
-				except KeyboardInterrupt:
-					print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
-					suspender(1)
 					sys.exit()
-				print("\n\033[1;96m[!] Download completo do vídeo!\033[m")
-				print("\033[1;35m[+] Voltando ao menu...\033[m")
-				suspender(2)
-				os.system("clear")
+				else:
+					if tecle.isnumeric():
+						tecle = int(tecle)
+						os.makedirs("Videos_pafy",exist_ok=True)
+						local = Path.home() / r"Downloads\E-tube"
+						if tecle == 1:
+
+							print("\033[1;32m[+] Você escolheu baixar com o Pafy!")
+							print("O vídeo será salvo dentro da pasta: Videos_pafy\033[m\n")
+							link_video_youtube = str(input("\033[1;32m[+] Link do vídeo: \033[m")).strip()
+
+							video_tube = pafy.new(link_video_youtube)
+							stream = video_tube.streams
+							videos_info = video_tube.getbest()
+
+							print("\n\033[1;33m[*] Fazendo download do vídeo: [{}]\n".format(video_tube.title))
+							os.chdir(local)
+							os.chdir("Videos_pafy")
+							with open("Videos_pafy", "wb") as play_video:
+								os.path.join("Videos_pafy" + "/" + str(videos_info.download()))
+								play_video.close()
+							for arquivo in os.listdir(str(local)+"\\Videos_pafy"):
+								if arquivo.endswith(".mp4"):
+									pass
+								else:
+									os.remove(arquivo)
+							print("\n\033[1;32m[*] Download completo")
+							suspender(1.3)
+							
+							os.system("clear")
+
+						elif tecle == 2:
+							try:
+								link = str(input("\033[1;33mUrl do vídeo:\033[m "))
+								adicionar_links(arq=arquivo,dados=link,arg="[LINKS DE VIDEOS]")
+							except KeyboardInterrupt:
+								print("\nSaindo...")
+								suspender(1)
+								sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
+							url_video = link
+							yt = YouTube(url_video)
+
+							print("\n\033[1;31m[!] Buscando streams diponíveis para download...\033[m\n")
+
+							for streams in yt.streams.filter(file_extension="mp4"):
+								print("\033[1;31m[Vídeo]\033[m \033[1;33m{}\033[m".format(streams))
+								suspender(0.5)
+
+							print("\n\033[1;32m[+] Iniciando o download...\033[m")
+							try:
+								video = yt.streams.get_highest_resolution()
+								yt.register_on_progress_callback(on_progress)
+								video.download(output_path="Videos-baixados")
+							except VideoUnavailable:
+								print("\033[1;31mO vídeo:\033[m [{}] \033[1;31mse encontra indísponivel para download...\033[m ")
+							except KeyboardInterrupt:
+								print("\033[1;31m[OPS]: Ocorreu alguma interrupção! Fechando o script...\033[m")
+								suspender(1)
+								sys.exit()
+
+							print("\n\033[1;96m[!] Download completo do vídeo!\033[m")
+							print("\033[1;35m[+] Voltando ao menu...\033[m")
+							suspender(2)
+							os.system("clear")
 
 			elif user == "02" or user == "2":
 
@@ -164,57 +212,132 @@ MENU:
 				print("\033[1;32m[+] Opção 2 > Download de uma Playlist.mp4\033[m")
 				print("\033[1;32m[+] Os vídeos ficarão salvos na pasta 'playlist' do script!\n\033[m")
 				print()
+
+				print("""
+########## Formas de download: ##########
+\033[1;33m
+[1] Pafy
+[2] Pytube\033[m\n""")
 				try:
-					link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
-					adicionar_links(arq=arquivo,dados=link_play,arg="[LINKS DAS PLAYLISTS]")
+					informar = str(input("\033[1;32m[+] Com qual forma de download você deseja continuar: \033[m"))
 				except KeyboardInterrupt:
 					print("\nSaindo...")
 					suspender(1)
-					sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
+					sys.exit()
 				else:
-					PLAYLIST_URL = link_play
-					playlist = Playlist(PLAYLIST_URL)
-					tamanho_da_playlist = 0
-					for videos in playlist:
-						tamanho_da_playlist += 1
-					print()
-					print("\n\033[1;32mSobre a sua playlist:\033[m\n")
-					print("\033[1;31m[*] Nome:\033[m {}".format(playlist.title))
-					print("\033[1;31m[*] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
-					print("\033[1;31m[*] link quebrado:\033[m o vídeo é pulado!")
-					print("\033[1;31m[*] Local de armazenamento:\033[m pasta playlist")
-					print()
-					print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
-					tamanho_da_playlist = 0
-					for numero_play, url in enumerate(playlist):
-						print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
-						video = YouTube(url)
-						stream = video.streams.get_highest_resolution()
-						print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
+
+					if informar == "1":
+
+						os.makedirs("Videos_pafy",exist_ok=True)
+						local_playlist = Path.home() / r"Downloads\E-tube"
+						print("\033[1;32m[+] Opção de baixar com Pafy! O vídeo ficará salvo na pasta: Video_pafy\033[m")
+
+						nome = str(input("\n\033[1;33m[+] Nome para a sua playlist: ")).strip()
+						quantidade = str(input("\033[1;33m[+] Quantos vídeos você deseja baixar de uma vez: \033[m"))
+						nome_playlist = nome+".txt"
+
+						print()
+						for links in range(int(quantidade)):
+							link = str(input("\033[1;33m[+] Link do vídeo: ")).strip()
+							with open(nome_playlist,"at") as file:
+								file.write(f"{link}\n")
+						print()
+						for arquivo in os.listdir(str(local_playlist)):
+							if arquivo.startswith(nome):
+								with open(arquivo,"rt") as youtube_links:
+									resultado = youtube_links.readlines()
+									for links_arqv in resultado:
+										video_youtube = pafy.new(links_arqv)
+										stream = video_youtube.streams
+										baixar = video_youtube.getbest()
+
+										os.chdir(local_playlist)
+										os.chdir("Videos_pafy")
+
+										print("\n------------------------------------------------")
+										print("\033[1;36mINFORMAÇÕES SOBRE O VÍDEO:\033[m {}\n".format(video_youtube.title))
+										print(f"""
+\033[1;33mTítulo do vídeo:\033[m {video_youtube.title}
+\033[1;33mDuração do vídeo:\033[m {video_youtube.duration}
+\033[1;33mAutor do vídeo:\033[m {video_youtube.author}
+\033[1;33mQuantidade de likes:\033[m {video_youtube.likes}
+\033[1;33mQuantidade de visualizações:\033[m {video_youtube.viewcount}
+""")
+										with open("Videos_pafy","wb") as videos_t:
+											os.path.join("Videos_pafy" + "/" + str(baixar.download())).strip()
+											videos_t.close()
+										print("------------------------------------------------")
+								os.chdir(local_playlist)
+								os.chdir("Videos_pafy")
+
+								for naovideo in os.listdir(str(local_playlist)+"\\Videos_pafy"):
+									if naovideo.endswith(".mp4"):
+										pass
+									else:
+										os.remove(naovideo)
+
+						os.chdir(local_playlist)
+
+						for arqvs in os.listdir(r"\Users\Cliente\Downloads\E-tube"):
+							if arqvs.endswith(".txt"):
+								if arqvs == "requirements.txt":
+									pass
+								else:
+									os.remove(arqvs)
+
+
+					elif informar == "2":
 						try:
-							stream.download(output_path="playlist")
-						except VideoUnavailable:
-							print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
-							print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
-							time.sleep(2)
+							link_play = str(input("\033[1;33mUrl da playlist:\033[m "))
+							adicionar_links(arq=arquivo,dados=link_play,arg="[LINKS DAS PLAYLISTS]")
 						except KeyboardInterrupt:
-							print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
+							print("\nSaindo...")
+							suspender(1)
+							sys.exit()# Essa linha não seria necessária, mas se ocorrer um bug inesperado, ela sai do programa
 						else:
-							pass
-					convertermp3 = str(input("\033[1;32m[+] Deseja converter todos os vídeos da playlist para o formato MP3? [S/N]:\033[m ")).upper()
-					while convertermp3 not in "S" and convertermp3 not in "N":
-						convertermp3 = str(input("\033[1;32m[+] Deseja converter todos os vídeos da playlist para o formato MP3? [S/N]:\033[m ")).upper()
-					if convertermp3 == "S":
-						converter_video_para_mp3(fun="cheio")
-					elif convertermp3 == "N":
-						print("\n\033[1;32m[!] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
-						print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
-						suspender(2)
-						os.system("clear")
-					else:
-						print("\033[1;31m[!] Opção vazia não é permitida!\033[m")
-						suspender(2)
-						os.system("clear")
+							PLAYLIST_URL = link_play
+							playlist = Playlist(PLAYLIST_URL)
+							tamanho_da_playlist = 0
+							for videos in playlist:
+								tamanho_da_playlist += 1
+							print()
+							print("\n\033[1;32mSobre a sua playlist:\033[m\n")
+							print("\033[1;31m[*] Nome:\033[m {}".format(playlist.title))
+							print("\033[1;31m[*] Tamanho da sua playlist:\033[m {} \033[1;31mvídeos!\033[m".format(tamanho_da_playlist))
+							print("\033[1;31m[*] link quebrado:\033[m o vídeo é pulado!")
+							print("\033[1;31m[*] Local de armazenamento:\033[m pasta playlist")
+							print()
+							print("\033[1;92m[+] Iniciando o download dos vídeos...\033[m\n")
+							tamanho_da_playlist = 0
+							for numero_play, url in enumerate(playlist):
+								print("\033[1;33m[+] Baixando o [{}]º video:\033[m {}".format(numero_play+1,url))
+								video = YouTube(url)
+								stream = video.streams.get_highest_resolution()
+								print("\033[1;31mStatus:\033[m \033[1;32m[COMPLETO]\033[m")
+								try:
+									stream.download(output_path="playlist")
+								except VideoUnavailable:
+									print("\033[1;31mStatus:\033[m \033[1;33m[PULADO]\033[m")
+									print("\n\033[1;91mO video foi pulado porque o o link está quebrado!\033[m")
+									time.sleep(2)
+								except KeyboardInterrupt:
+									print("\n\033[m[ERROR]: Download quebrado porque o usuário saiu!\033[m")
+								else:
+									pass
+							convertermp3 = str(input("\033[1;32m[+] Deseja converter todos os vídeos da playlist para o formato MP3? [S/N]:\033[m ")).upper()
+							while convertermp3 not in "S" and convertermp3 not in "N":
+								convertermp3 = str(input("\033[1;32m[+] Deseja converter todos os vídeos da playlist para o formato MP3? [S/N]:\033[m ")).upper()
+							if convertermp3 == "S":
+								converter_video_para_mp3(fun="cheio")
+							elif convertermp3 == "N":
+								print("\n\033[1;32m[!] Download Completo da playlist! Verifique na pasta: Playlist YT !\n\033[m")
+								print("\n\033[1;35m[+] Voltando ao menu...\n\033[m")
+								suspender(2)
+								os.system("clear")
+							else:
+								print("\033[1;31m[!] Opção vazia não é permitida!\033[m")
+								suspender(2)
+								os.system("clear")
 			elif user == "03" or user == "3":
 
 				print("\n\033[1;32m[+] Opção 3 > Download de uma Musica.mp3\033[m")
