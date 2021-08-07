@@ -8,7 +8,7 @@
 > Meu WhatsApp: +5531986802198
 
 # Foto do script:
-![Script E-tube by lucas-Dk](https://user-images.githubusercontent.com/69327287/120875349-d29eaf00-c581-11eb-8212-1993d85bd4fa.png)
+![E-tube versão (7.4) by: lucas-Dk](https://user-images.githubusercontent.com/69327287/128608227-6234eb38-9e33-4ec7-9a26-c222f1da3ed6.png)
 
 
 
@@ -38,6 +38,8 @@
 - Opção de download de 80 fotos do google! Baixe suas fotos favoritas de forma rápida. (Atualização de hoje 21/05/2021)
 - Correção de bugs na hora da conversão! (Atualização de hoje 31/05/2021)
 - Nessa versão 7.2 o E-tube está muito mais organizado! A saída dos arquivos ficam dentro da sua respectiva pasta! (Atualização de hoje 04/06/2021)
+- Adicionada nova forma de download de vídeos! (Atualização de hoje 06/08/2021)
+- Nessa versão o e-tube encontra com duas opções de download dos vídeos, deixando o usuário optar por qual ele tiver vontade! (Atualização de hoje 07/08/2021)
 
 
 # Nova função (Download do Facebook)
