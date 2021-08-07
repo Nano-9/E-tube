@@ -145,32 +145,61 @@ MENU:
 					if tecle.isnumeric():
 						tecle = int(tecle)
 						os.makedirs("Videos_pafy",exist_ok=True)
-						local = Path.home() / r"Downloads\E-tube"
 						if tecle == 1:
+							if sys.platform == "win32":
 
-							print("\033[1;32m[+] Você escolheu baixar com o Pafy!")
-							print("O vídeo será salvo dentro da pasta: Videos_pafy\033[m\n")
-							link_video_youtube = str(input("\033[1;32m[+] Link do vídeo: \033[m")).strip()
+								local = Path.home() / r"Downloads\E-tube"
 
-							video_tube = pafy.new(link_video_youtube)
-							stream = video_tube.streams
-							videos_info = video_tube.getbest()
+								print("\033[1;32m[+] Você escolheu baixar com o Pafy!")
+								print("O vídeo será salvo dentro da pasta: Videos_pafy\033[m\n")
+								link_video_youtube = str(input("\033[1;32m[+] Link do vídeo: \033[m")).strip()
 
-							print("\n\033[1;33m[*] Fazendo download do vídeo: [{}]\n".format(video_tube.title))
-							os.chdir(local)
-							os.chdir("Videos_pafy")
-							with open("Videos_pafy", "wb") as play_video:
-								os.path.join("Videos_pafy" + "/" + str(videos_info.download()))
-								play_video.close()
-							for arquivo in os.listdir(str(local)+"\\Videos_pafy"):
-								if arquivo.endswith(".mp4"):
-									pass
-								else:
-									os.remove(arquivo)
-							print("\n\033[1;32m[*] Download completo")
-							suspender(1.3)
-							
-							os.system("clear")
+								video_tube = pafy.new(link_video_youtube)
+								stream = video_tube.streams
+								videos_info = video_tube.getbest()
+
+								print("\n\033[1;33m[*] Fazendo download do vídeo: [{}]\n".format(video_tube.title))
+								os.chdir(local)
+								os.chdir("Videos_pafy")
+								with open("Videos_pafy", "wb") as play_video:
+									os.path.join("Videos_pafy" + "/" + str(videos_info.download()))
+									play_video.close()
+								for arquivo in os.listdir(str(local)+"\\Videos_pafy"):
+									if arquivo.endswith(".mp4"):
+										pass
+									else:
+										os.remove(arquivo)
+
+								print("\n\033[1;32m[*] Download completo")
+								suspender(1.3)
+								
+								os.system("clear")
+
+							elif sys.platform == "linux":
+
+								local = Path.home() / "Downloads/E-tube"
+
+								print("\033[1;32m[+] Você escolheu baixar com o Pafy!")
+								print("O vídeo será salvo dentro da pasta: Videos_pafy\033[m\n")
+								link_video_youtube = str(input("\033[1;32m[+] Link do vídeo: \033[m")).strip()
+
+								video_tube = pafy.new(link_video_youtube)
+								stream = video_tube.streams
+								videos_info = video_tube.getbest()
+
+								print("\n\033[1;33m[*] Fazendo download do vídeo: [{}]\n".format(video_tube.title))
+								os.chdir(local)
+								os.chdir("Videos_pafy")
+								with open("Videos_pafy", "wb") as play_video:
+									os.path.join("Videos_pafy" + "/" + str(videos_info.download()))
+									play_video.close()
+								for arquivo in os.listdir(str(local)+"/Videos_pafy"):
+									if arquivo.endswith(".mp4"):
+										pass
+									else:
+										os.remove(arquivo)
+								print("\n\033[1;32m[*] Download completo")
+								suspender(1.3)
 
 						elif tecle == 2:
 							try:
@@ -227,64 +256,123 @@ MENU:
 				else:
 
 					if informar == "1":
+						if sys.platform == "win32":
 
-						os.makedirs("Videos_pafy",exist_ok=True)
-						local_playlist = Path.home() / r"Downloads\E-tube"
-						print("\033[1;32m[+] Opção de baixar com Pafy! O vídeo ficará salvo na pasta: Video_pafy\033[m")
+							os.makedirs("Videos_pafy",exist_ok=True)
+							local_playlist = Path.home() / r"Downloads\E-tube"
+							print("\033[1;32m[+] Opção de baixar com Pafy! O vídeo ficará salvo na pasta: Video_pafy\033[m")
 
-						nome = str(input("\n\033[1;33m[+] Nome para a sua playlist: ")).strip()
-						quantidade = str(input("\033[1;33m[+] Quantos vídeos você deseja baixar de uma vez: \033[m"))
-						nome_playlist = nome+".txt"
+							nome = str(input("\n\033[1;33m[+] Nome para a sua playlist: ")).strip()
+							quantidade = str(input("\033[1;33m[+] Quantos vídeos você deseja baixar de uma vez: \033[m"))
+							nome_playlist = nome+".txt"
 
-						print()
-						for links in range(int(quantidade)):
-							link = str(input("\033[1;33m[+] Link do vídeo: ")).strip()
-							with open(nome_playlist,"at") as file:
-								file.write(f"{link}\n")
-						print()
-						for arquivo in os.listdir(str(local_playlist)):
-							if arquivo.startswith(nome):
-								with open(arquivo,"rt") as youtube_links:
-									resultado = youtube_links.readlines()
-									for links_arqv in resultado:
-										video_youtube = pafy.new(links_arqv)
-										stream = video_youtube.streams
-										baixar = video_youtube.getbest()
+							print()
+							for links in range(int(quantidade)):
+								link = str(input("\033[1;33m[+] Link do vídeo: ")).strip()
+								with open(nome_playlist,"at") as file:
+									file.write(f"{link}\n")
+							print()
+							for arquivo in os.listdir(str(local_playlist)):
+								if arquivo.startswith(nome):
+									with open(arquivo,"rt") as youtube_links:
+										resultado = youtube_links.readlines()
+										for links_arqv in resultado:
+											video_youtube = pafy.new(links_arqv)
+											stream = video_youtube.streams
+											baixar = video_youtube.getbest()
 
-										os.chdir(local_playlist)
-										os.chdir("Videos_pafy")
+											os.chdir(local_playlist)
+											os.chdir("Videos_pafy")
 
-										print("\n------------------------------------------------")
-										print("\033[1;36mINFORMAÇÕES SOBRE O VÍDEO:\033[m {}\n".format(video_youtube.title))
-										print(f"""
+											print("\n------------------------------------------------")
+											print("\033[1;36mINFORMAÇÕES SOBRE O VÍDEO:\033[m {}\n".format(video_youtube.title))
+											print(f"""
 \033[1;33mTítulo do vídeo:\033[m {video_youtube.title}
 \033[1;33mDuração do vídeo:\033[m {video_youtube.duration}
 \033[1;33mAutor do vídeo:\033[m {video_youtube.author}
 \033[1;33mQuantidade de likes:\033[m {video_youtube.likes}
 \033[1;33mQuantidade de visualizações:\033[m {video_youtube.viewcount}
-""")
-										with open("Videos_pafy","wb") as videos_t:
-											os.path.join("Videos_pafy" + "/" + str(baixar.download())).strip()
-											videos_t.close()
-										print("------------------------------------------------")
-								os.chdir(local_playlist)
-								os.chdir("Videos_pafy")
+	""")
+											with open("Videos_pafy","wb") as videos_t:
+												os.path.join("Videos_pafy" + "/" + str(baixar.download())).strip()
+												videos_t.close()
+											print("------------------------------------------------")
+									os.chdir(local_playlist)
+									os.chdir("Videos_pafy")
 
-								for naovideo in os.listdir(str(local_playlist)+"\\Videos_pafy"):
-									if naovideo.endswith(".mp4"):
+									for naovideo in os.listdir(str(local_playlist)+"\\Videos_pafy"):
+										if naovideo.endswith(".mp4"):
+											pass
+										else:
+											os.remove(naovideo)
+
+							os.chdir(local_playlist)
+
+							for arqvs in os.listdir(str(local_playlist)):
+								if arqvs.endswith(".txt"):
+									if arqvs == "requirements.txt":
 										pass
 									else:
-										os.remove(naovideo)
+										os.remove(arqvs)
+						elif sys.plaform == "linux":
 
-						os.chdir(local_playlist)
+							os.makedirs("Videos_pafy",exist_ok=True)
+							local_playlist = Path.home() / "Downloads/E-tube"
+							local_playlist2 = Path.home() / "Downloads/E-tube/Videos_pafy"
+							print("\033[1;32m[+] Opção de baixar com Pafy! O vídeo ficará salvo na pasta: Video_pafy\033[m")
 
-						for arqvs in os.listdir(r"\Users\Cliente\Downloads\E-tube"):
-							if arqvs.endswith(".txt"):
-								if arqvs == "requirements.txt":
-									pass
-								else:
-									os.remove(arqvs)
+							nome = str(input("\n\033[1;33m[+] Nome para a sua playlist: ")).strip()
+							quantidade = str(input("\033[1;33m[+] Quantos vídeos você deseja baixar de uma vez: \033[m"))
+							nome_playlist = nome+".txt"
 
+							print()
+							for links in range(int(quantidade)):
+								link = str(input("\033[1;33m[+] Link do vídeo: ")).strip()
+								with open(nome_playlist,"at") as file:
+									file.write(f"{link}\n")
+							print()
+							for arquivo in os.listdir(str(local_playlist)):
+								if arquivo.startswith(nome):
+									with open(arquivo,"rt") as youtube_links:
+										resultado = youtube_links.readlines()
+										for links_arqv in resultado:
+											video_youtube = pafy.new(links_arqv)
+											stream = video_youtube.streams
+											baixar = video_youtube.getbest()
+
+											os.chdir(local_playlist)
+											os.chdir("Videos_pafy")
+
+											print("\n------------------------------------------------")
+											print("\033[1;36mINFORMAÇÕES SOBRE O VÍDEO:\033[m {}\n".format(video_youtube.title))
+											print(f"""
+\033[1;33mTítulo do vídeo:\033[m {video_youtube.title}
+\033[1;33mDuração do vídeo:\033[m {video_youtube.duration}
+\033[1;33mAutor do vídeo:\033[m {video_youtube.author}
+\033[1;33mQuantidade de likes:\033[m {video_youtube.likes}
+\033[1;33mQuantidade de visualizações:\033[m {video_youtube.viewcount}
+	""")
+											with open("Videos_pafy","wb") as videos_t:
+												os.path.join("Videos_pafy" + "/" + str(baixar.download())).strip()
+												videos_t.close()
+											print("------------------------------------------------")
+									os.chdir(local_playlist)
+									os.chdir("Videos_pafy")
+
+									for naovideo in os.listdir(str(local_playlist)+"/Videos_pafy"):
+										if naovideo.endswith(".mp4"):
+											pass
+										else:
+											os.remove(naovideo)
+
+							os.chdir(local_playlist)
+
+							for arqvs in os.listdir(str(local_playlist)):
+								if arqvs.endswith(".txt"):
+									if arqvs == "requirements.txt":
+										pass
+									else:
+										os.remove(arqvs)
 
 					elif informar == "2":
 						try:
