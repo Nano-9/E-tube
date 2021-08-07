@@ -39,7 +39,7 @@
 - Correção de bugs na hora da conversão! (Atualização de hoje 31/05/2021)
 - Nessa versão 7.2 o E-tube está muito mais organizado! A saída dos arquivos ficam dentro da sua respectiva pasta! (Atualização de hoje 04/06/2021)
 - Adicionada nova forma de download de vídeos! (Atualização de hoje 06/08/2021)
-- Nessa versão o e-tube encontra com duas opções de download dos vídeos, deixando o usuário optar por qual ele tiver vontade! (Atualização de hoje 07/08/2021)
+- Nessa versão o E-tube encontra com duas opções de download dos vídeos, deixando o usuário optar por qual ele tiver vontade! (Atualização de hoje 07/08/2021)
 
 
 # Nova função (Download do Facebook)
