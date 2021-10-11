@@ -8,8 +8,7 @@
 > Meu WhatsApp: +5531986802198
 
 # Foto do script:
-![E-tube versão (7.4) by: lucas-Dk](https://user-images.githubusercontent.com/69327287/128608227-6234eb38-9e33-4ec7-9a26-c222f1da3ed6.png)
-
+![E-tube foto do programa](https://user-images.githubusercontent.com/69327287/136815500-51e5b34d-c911-4870-88b1-709404ece9f4.png)
 
 
 
@@ -40,6 +39,7 @@
 - Nessa versão 7.2 o E-tube está muito mais organizado! A saída dos arquivos ficam dentro da sua respectiva pasta! (Atualização de hoje 04/06/2021)
 - Adicionada nova forma de download de vídeos! (Atualização de hoje 06/08/2021)
 - Nessa versão o E-tube encontra com duas opções de download dos vídeos, deixando o usuário optar por qual ele tiver vontade! (Atualização de hoje 07/08/2021)
+- Adicionada a opção de cortar um vídeo! Agora você pode cortar os seus vídeos também. (Atualização de hoje 11/10/2021)
 
 
 # Nova função (Download do Facebook)
