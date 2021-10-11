@@ -107,11 +107,12 @@ MENU:
 \033[1;31m[\033[1;32m 04 \033[m\033[1;31m]\033[m - Baixar vídeos/fotos do instagram
 \033[1;31m[\033[1;32m 05 \033[m\033[1;31m]\033[m - Baixar vídeos do Facebook
 \033[1;31m[\033[1;32m 06 \033[m\033[1;31m]\033[m - Converter vídeos para MP3
-\033[1;31m[\033[1;32m 07 \033[m\033[1;31m]\033[m - Criar um GIF
-\033[1;31m[\033[1;32m 08 \033[m\033[1;31m]\033[m - Baixar imagens do Google
-\033[1;31m[\033[1;32m 09 \033[m\033[1;31m]\033[m - Mudar cor do banner
-\033[1;31m[\033[1;32m 10 \033[m\033[1;31m]\033[m - Reparar erros do script
-\033[1;31m[\033[1;32m 11 \033[m\033[1;31m]\033[m - Fale comigo
+\033[1;31m[\033[1;32m 07 \033[m\033[1;31m]\033[m - Cortar vídeos
+\033[1;31m[\033[1;32m 08 \033[m\033[1;31m]\033[m - Criar um GIF
+\033[1;31m[\033[1;32m 09 \033[m\033[1;31m]\033[m - Baixar imagens do Google
+\033[1;31m[\033[1;32m 10 \033[m\033[1;31m]\033[m - Mudar cor do banner
+\033[1;31m[\033[1;32m 11 \033[m\033[1;31m]\033[m - Reparar erros do script
+\033[1;31m[\033[1;32m 12 \033[m\033[1;31m]\033[m - Fale comigo
 \033[1;31m[\033[1;32m xx \033[m\033[1;31m]\033[m - Sair
 			""")
 		try:
@@ -544,6 +545,40 @@ MENU:
 						os.system("clear")
 					
 			elif user == "07" or user == "7":
+				os.makedirs("Videos_cortados",exist_ok=True)
+				def minuto_para_segundo(minuto_video):
+					separar_minuto = minuto_video.split(":")
+					minuto = int(separar_minuto[0])
+					segundo = int(separar_minuto[1])
+
+					cortar_video_segundo = (minuto * 60) + segundo
+					return cortar_video_segundo
+
+				caminho_video = str(input("[+] Informe o caminho do vídeo: ")).strip()
+				while not validar_caminho(caminho=caminho_video):
+					if sys.platform == "win32":
+						print("\033[1;31m[ATENÇÃO]:\033[m Está faltando uma contra barra -> \\ no final do caminho!")
+					elif sys.platform == "linux":
+						print("\033[1;31m[ATENÇÃO]:\033[m Está faltando uma barra -> / no final do caminho!")
+					caminho_video = str(input("[+] Informe o caminho do vídeo: ")).strip()
+
+				nome_video = str(input("[+] Informe o nome do vídeo e sua extensão. Ex: [VIDEO.MP4]: ")).strip()
+
+				arquivos_video = mp.VideoFileClip(caminho_video+nome_video)
+				minuto_inicial = str(input("[+] Informe o minuto inicial para cortar o vídeo. Ex: [01:10]: ")).strip()
+				minuto_final = str(input("[+] Informe o minuto final para cortar o vídeo. Ex: [01:20]: ")).strip()
+
+				minuto_inicio = minuto_para_segundo(minuto_video=minuto_inicial)
+				minuto_fim = minuto_para_segundo(minuto_video=minuto_final)
+
+				cortar_video = arquivos_video.subclip(minuto_inicio,minuto_fim)
+				os.chdir("Videos_cortados")
+				os.path.join("Videos_cortados"+"/"+str(cortar_video.write_videofile("cortado"+nome_video)))
+				print("Vídeo cortado com sucesso, salvo em -> Videos_cortados")
+				suspender(2)
+				os.system("clear")
+
+			elif user == "08" or user == "8":
 				print("\n\033[1;32m[+] Opção de criação de GIF!")
 				print("[+] O GIF é armazenado na pasta do E-tube.\033[m")
 				print()
@@ -584,7 +619,7 @@ MENU:
 				suspender(2)
 				os.system("clear")
 
-			elif user == "08" or user == "8":
+			elif user == "09" or user == "9":
 				horario = strftime("%H:%M:%S")
 				starting = datetime.datetime.now()
 				print("\n\033[1;32m[+] Opção de baixar imagens do Google!")
@@ -624,10 +659,10 @@ MENU:
 						suspender(2.2)
 						os.system("clear")
 
-			elif user == "09" or user == "9":
-				os.system("clear")
-
 			elif user == "10":
+				os.system("clear")
+				
+			elif user == "11":
 				sistema = sys.platform
 				if sistema == "Linux" or "Linux2":
 					print()
@@ -660,9 +695,7 @@ MENU:
 					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
 					sys.exit()
 
-
-			elif user == "11":
-
+			elif user == "12":
 				print()
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
