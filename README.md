@@ -6,11 +6,6 @@
 > AUTOR: Nano-9
 > 
 
-# Foto do script:
-![E-tube foto do programa](https://user-images.githubusercontent.com/69327287/136815500-51e5b34d-c911-4870-88b1-709404ece9f4.png)
-
-
-
 # Atualização chegou:
 > Data da atualização: 22/04/2021
 
