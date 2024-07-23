@@ -3,9 +3,8 @@
 - Ele também converte playlists de vídeos inteiras de diferentes formatos em MP3
 - Cria GIF's dos seus vídeos favoritos! (Saiba tudo sobre lendo abaixo):
 
-> AUTOR: LUCAS-DK
+> AUTOR: Nano-9
 > 
-> Meu WhatsApp: +5531986802198
 
 # Foto do script:
 ![E-tube foto do programa](https://user-images.githubusercontent.com/69327287/136815500-51e5b34d-c911-4870-88b1-709404ece9f4.png)
