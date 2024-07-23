@@ -1,10 +1,10 @@
-# Autor: lucas-Dk                                                           |
-# Meu github: https://github.com/lucas-Dk                                   |
-# Meu facebook: https://www.facebook.com/Walker.Lxrd/                       |     \
-# ////                                                                              By: lucas -Dk E-tube
+# Autor: Nano-9                                                             |
+# Meu github: https://github.com/nano-9                                     |
+# Meu Telegram: https://t.me/rdzin9                                         |     \
+# ////                                                                              By: Nano-9 E-tube
 # Necessário internet                                                       |     /
 # Ele não deixa rodar o código se não tiver internet                        |
-# Meu whatsapp, copie esse código e cole no navegador: wa.me/5531986802198  |
+# Meu telegram, copie esse código e cole no navegador: https://t.me/rdzin9  |
 
 try:
 	import sys
@@ -93,11 +93,11 @@ else:
 		banner.change_banner()
 		print("""
 .----------------------------.
-|  Whatsapp: +5531986802198  |
+| Teleg: https://t.me/rdzin9 |
 '----------------------------'
-    ^      (\_/) \033[1;32m[INFO]\033[m Coded by: Lucas-Dk
+    ^      (\_/) \033[1;32m[INFO]\033[m Coded by: Nano-9
     '----- (O.o) \033[1;32m[INFO]\033[m Meu GitHub: https://github.com/lucas-Dk
-           (> <) \033[1;32m[INFO]\033[m Reporte erros: https://www.facebook.com/Walker.Lxrd/
+           (> <) \033[1;32m[INFO]\033[m Reporte erros: https://t.me/rdzin9
 
 MENU:
 
@@ -669,7 +669,7 @@ MENU:
 					print("\033[1;32m[+] Opção 7 > Reparo do script automático!\033[m")
 					print()
 					print("\n\033[1;32m[!] Atenção: Caso o erro continue entre em contato comigo:\033[m ")
-					print("> https://www.facebook.com/Walker.Lxrd/\n ")
+					print("> https://t.me/rdzin9\n ")
 					try:
 						seguir_reparo = str(input("\033[1;33m[!] Enter para seguir com o reparo:\033[m "))
 					except KeyboardInterrupt:
@@ -692,7 +692,7 @@ MENU:
 						os.system("clear")
 				else:
 					print("\033[1;31m[!] Desculpe! O seu sistema pode apresentar falhas com esse patch\033[m")
-					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://www.facebook.com/Walker.Lxrd/\n")
+					print("\033[1;33m[!] Entre em contato comigo e irei resolver:\033[m https://t.me/rdzin9\n")
 					sys.exit()
 
 			elif user == "12":
@@ -700,8 +700,7 @@ MENU:
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
 ---------------------------------------------------------------
-\033[1;4mE-mail:\033[m lucas2000bss@gmail.com
-\033[1;4mFacebook:\033[m https://www.facebook.com/Walker.Lxrd/
+\033[1;4mFacebook:\033[m https://t.me/rdzin9
 ---------------------------------------------------------------
 \033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
