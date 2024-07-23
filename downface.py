@@ -1,5 +1,5 @@
 # script importacoes
-# by lucas-Dk
+# by Nano-9
 try:
     import re
     import os
