@@ -1,5 +1,5 @@
 # partição do script que baixa videos/fotos do instagram
-# by: lucas-Dk
+# by: Nano-9
 
 import re
 import os
