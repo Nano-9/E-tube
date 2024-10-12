@@ -96,7 +96,7 @@ else:
 | Teleg: https://t.me/rdzin9 |
 '----------------------------'
     ^      (\_/) \033[1;32m[INFO]\033[m Coded by: Nano-9
-    '----- (O.o) \033[1;32m[INFO]\033[m Meu GitHub: https://github.com/lucas-Dk
+    '----- (O.o) \033[1;32m[INFO]\033[m Meu GitHub: https://github.com/nano-9
            (> <) \033[1;32m[INFO]\033[m Reporte erros: https://t.me/rdzin9
 
 MENU:
