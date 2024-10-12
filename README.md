@@ -105,7 +105,7 @@
 - Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
 - termux-setup-storage
 - cd storage/downloads
-- git clone https://github.com/lucas-Dk/E-tube
+- git clone https://github.com/nano-9/E-tube
 - cd E-tube
 - pip install --upgrade pip
 - pip install -r requirements.txt
@@ -117,7 +117,7 @@
 
 - Pelo terminal, acesse a pasta de Downloads porque é onde você vai deixar o script!
 - cd \Users\Cliente\Downloads (cole o caminho assim, lembrando que o seu pode ta diferente, cole certo!)
-- git clone https://github.com/lucas-Dk/E-tube
+- git clone https://github.com/nano-9/E-tube
 - cd E-tube
 - pip install --upgrade pip
 - pip install -r requirements.txt
@@ -161,5 +161,5 @@ você vai encontrar o áudio do vídeo que foi convertido para mp3
 
 
 
-> script by > Lucas-DK
+> script by > nano-9
 
