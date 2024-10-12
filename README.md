@@ -44,15 +44,11 @@
 - Pegue o link do vídeo e coloque no programa
 - Ele informará a qualidade do vídeo para você e fará o download em seguida!
 - Veja como fica:
-- ![Exemplo de como é](https://user-images.githubusercontent.com/69327287/117861711-201c4a80-b268-11eb-99ff-1dfd8d909ef9.png)
-
 ## Onde encontro os vídeos do facebook?
 
 - O script logo após o download do vídeo irá armazenar
 - o vídeo dentro da pasta com o nome VideosFacebook!
 - Veja como fica:
-- ![e-tube armazenamento](https://user-images.githubusercontent.com/69327287/120943294-6dbf9200-c704-11eb-8bbe-1434d5bc3cf3.png)
-
 
 
 # Nova função (Download do Instagram)
@@ -69,14 +65,8 @@
 - Já a foto de perfil que você baixar, vai ficar armazenada na pasta com o mesmo nome de usuário!
 
 # Pasta POST:
-![Veja como fica a pasta ](https://user-images.githubusercontent.com/69327287/116791891-b3e55e00-aa93-11eb-902e-901190e3285a.png)
-
 # Arquivos baixados estão dentro da pasta POST:
-![Arquivos baixados ](https://user-images.githubusercontent.com/69327287/116791920-e1caa280-aa93-11eb-8bfe-30d3b5e2317c.png)
-
 # Videos baixados do Instagram ficam dentro da pasta POST:
-![Video fica aqui ](https://user-images.githubusercontent.com/69327287/116792114-11c67580-aa95-11eb-9dbf-f05f1c23c83a.png)
-
 
 # Função histórico?
 - Sim, é uma função que eu adicionei para guardar os links dos seus videos preferidos, playlists preferidas
@@ -101,9 +91,6 @@
 - Opção de download de video e fotos do Instagram
 
 # COMO FAZER A CONVERSÃO? [Siga o exemplo abaixo]:
-
-- ![clique aqui para ver o exemplo](https://user-images.githubusercontent.com/69327287/116332575-670a3a80-a7a8-11eb-9cd0-9caa88bf341d.png)
-
 
 # Terá mais atualizações?
 - Sim
@@ -148,7 +135,6 @@
 - Fora dessas pastas, na parte onde você encontra o script e etc
 você vai encontrar o áudio do vídeo que foi convertido para mp3
 
-- ![Exemplo](https://user-images.githubusercontent.com/69327287/116333196-7047d700-a7a9-11eb-9494-c5a098982baf.png)
 
 
 # Para acessar os vídeos rapidamente pelo terminal:
