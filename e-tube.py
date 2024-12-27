@@ -8,7 +8,7 @@
 
 try:
 	import sys
-	from pytube import YouTube, Playlist
+	from pytubefix import YouTube, Playlist
 	from time import sleep as suspender
 	import urllib.request
 	import os
