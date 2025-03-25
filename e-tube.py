@@ -700,7 +700,8 @@ MENU:
 				print("""
 \n\033[1;33m[+] Para contato:\033[m
 ---------------------------------------------------------------
-\033[1;4mFacebook:\033[m https://t.me/rdzin9
+\033[1;4mTelegram:\033[m https://t.me/rdzin9
+\033[1;4mInstagram:\033[m @nanoxsec
 ---------------------------------------------------------------
 \033[1;92m[+] Fale comigo por uma dessas redes e terá contato comigo\n\033[m
 				""")
